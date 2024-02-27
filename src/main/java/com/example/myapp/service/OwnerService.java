@@ -1,7 +1,7 @@
 package com.example.myapp.service;
 
 /**
- * Created by Gudilin on 26.02.2024.
+ * Created by Gudilin on 27.02.2024.
  */
 import com.example.myapp.model.Owner;
 import com.example.myapp.repository.OwnerRepository;
