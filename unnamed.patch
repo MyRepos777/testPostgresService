@@ -1,0 +1,3226 @@
+Index: src/main/java/com/example/myapp/service/OwnerService.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>windows-1251
+===================================================================
+--- src/main/java/com/example/myapp/service/OwnerService.java	(revision )
++++ src/main/java/com/example/myapp/service/OwnerService.java	(revision )
+@@ -0,0 +1,51 @@
++package com.example.myapp.service;
++
++/**
++ * Created by Gudilin on 26.02.2024.
++ */
++import com.example.myapp.model.Owner;
++import com.example.myapp.repository.OwnerRepository;
++import org.springframework.beans.factory.annotation.Autowired;
++import org.springframework.stereotype.Service;
++
++
++import java.util.List;
++
++
++@Service
++public class OwnerService {
++
++
++    private final OwnerRepository ownerRepository;
++
++
++    @Autowired
++    public OwnerService(OwnerRepository ownerRepository) {
++        this.ownerRepository = ownerRepository;
++    }
++
++
++    public List<Owner> getAllOwners() {
++        return ownerRepository.findAll();
++    }
++
++
++    public Owner getOwnerById(Long id) {
++        return ownerRepository.findById(id).orElse(null);
++    }
++
++
++    public Owner createOwner(Owner owner) {
++        return ownerRepository.save(owner);
++    }
++
++
++    public Owner updateOwner(Owner owner) {
++        return ownerRepository.save(owner);
++    }
++
++
++    public void deleteOwner(Long id) {
++        ownerRepository.deleteById(id);
++    }
++}
+\ No newline at end of file
+Index: ../HellowWorld2/.idea/copyright/profiles_settings.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- ../HellowWorld2/.idea/copyright/profiles_settings.xml	(revision )
++++ ../HellowWorld2/.idea/copyright/profiles_settings.xml	(revision )
+@@ -0,0 +1,3 @@
++<component name="CopyrightManager">
++  <settings default="" />
++</component>
+\ No newline at end of file
+Index: .idea/libraries/Maven__org_aspectj_aspectjweaver_1_9_21.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/libraries/Maven__org_aspectj_aspectjweaver_1_9_21.xml	(revision )
++++ .idea/libraries/Maven__org_aspectj_aspectjweaver_1_9_21.xml	(revision )
+@@ -0,0 +1,13 @@
++<component name="libraryTable">
++  <library name="Maven: org.aspectj:aspectjweaver:1.9.21">
++    <CLASSES>
++      <root url="jar://$MAVEN_REPOSITORY$/org/aspectj/aspectjweaver/1.9.21/aspectjweaver-1.9.21.jar!/" />
++    </CLASSES>
++    <JAVADOC>
++      <root url="jar://$MAVEN_REPOSITORY$/org/aspectj/aspectjweaver/1.9.21/aspectjweaver-1.9.21-javadoc.jar!/" />
++    </JAVADOC>
++    <SOURCES>
++      <root url="jar://$MAVEN_REPOSITORY$/org/aspectj/aspectjweaver/1.9.21/aspectjweaver-1.9.21-sources.jar!/" />
++    </SOURCES>
++  </library>
++</component>
+\ No newline at end of file
+Index: .idea/libraries/Maven__jakarta_annotation_jakarta_annotation_api_2_1_1.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/libraries/Maven__jakarta_annotation_jakarta_annotation_api_2_1_1.xml	(revision )
++++ .idea/libraries/Maven__jakarta_annotation_jakarta_annotation_api_2_1_1.xml	(revision )
+@@ -0,0 +1,13 @@
++<component name="libraryTable">
++  <library name="Maven: jakarta.annotation:jakarta.annotation-api:2.1.1">
++    <CLASSES>
++      <root url="jar://$MAVEN_REPOSITORY$/jakarta/annotation/jakarta.annotation-api/2.1.1/jakarta.annotation-api-2.1.1.jar!/" />
++    </CLASSES>
++    <JAVADOC>
++      <root url="jar://$MAVEN_REPOSITORY$/jakarta/annotation/jakarta.annotation-api/2.1.1/jakarta.annotation-api-2.1.1-javadoc.jar!/" />
++    </JAVADOC>
++    <SOURCES>
++      <root url="jar://$MAVEN_REPOSITORY$/jakarta/annotation/jakarta.annotation-api/2.1.1/jakarta.annotation-api-2.1.1-sources.jar!/" />
++    </SOURCES>
++  </library>
++</component>
+\ No newline at end of file
+Index: .idea/libraries/Maven__org_springframework_boot_spring_boot_starter_tomcat_3_2_2.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/libraries/Maven__org_springframework_boot_spring_boot_starter_tomcat_3_2_2.xml	(revision )
++++ .idea/libraries/Maven__org_springframework_boot_spring_boot_starter_tomcat_3_2_2.xml	(revision )
+@@ -0,0 +1,13 @@
++<component name="libraryTable">
++  <library name="Maven: org.springframework.boot:spring-boot-starter-tomcat:3.2.2">
++    <CLASSES>
++      <root url="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-starter-tomcat/3.2.2/spring-boot-starter-tomcat-3.2.2.jar!/" />
++    </CLASSES>
++    <JAVADOC>
++      <root url="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-starter-tomcat/3.2.2/spring-boot-starter-tomcat-3.2.2-javadoc.jar!/" />
++    </JAVADOC>
++    <SOURCES>
++      <root url="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-starter-tomcat/3.2.2/spring-boot-starter-tomcat-3.2.2-sources.jar!/" />
++    </SOURCES>
++  </library>
++</component>
+\ No newline at end of file
+Index: .idea/libraries/Maven__org_apache_logging_log4j_log4j_api_2_21_1.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/libraries/Maven__org_apache_logging_log4j_log4j_api_2_21_1.xml	(revision )
++++ .idea/libraries/Maven__org_apache_logging_log4j_log4j_api_2_21_1.xml	(revision )
+@@ -0,0 +1,13 @@
++<component name="libraryTable">
++  <library name="Maven: org.apache.logging.log4j:log4j-api:2.21.1">
++    <CLASSES>
++      <root url="jar://$MAVEN_REPOSITORY$/org/apache/logging/log4j/log4j-api/2.21.1/log4j-api-2.21.1.jar!/" />
++    </CLASSES>
++    <JAVADOC>
++      <root url="jar://$MAVEN_REPOSITORY$/org/apache/logging/log4j/log4j-api/2.21.1/log4j-api-2.21.1-javadoc.jar!/" />
++    </JAVADOC>
++    <SOURCES>
++      <root url="jar://$MAVEN_REPOSITORY$/org/apache/logging/log4j/log4j-api/2.21.1/log4j-api-2.21.1-sources.jar!/" />
++    </SOURCES>
++  </library>
++</component>
+\ No newline at end of file
+Index: .idea/libraries/Maven__org_springframework_spring_jdbc_6_1_3.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/libraries/Maven__org_springframework_spring_jdbc_6_1_3.xml	(revision )
++++ .idea/libraries/Maven__org_springframework_spring_jdbc_6_1_3.xml	(revision )
+@@ -0,0 +1,13 @@
++<component name="libraryTable">
++  <library name="Maven: org.springframework:spring-jdbc:6.1.3">
++    <CLASSES>
++      <root url="jar://$MAVEN_REPOSITORY$/org/springframework/spring-jdbc/6.1.3/spring-jdbc-6.1.3.jar!/" />
++    </CLASSES>
++    <JAVADOC>
++      <root url="jar://$MAVEN_REPOSITORY$/org/springframework/spring-jdbc/6.1.3/spring-jdbc-6.1.3-javadoc.jar!/" />
++    </JAVADOC>
++    <SOURCES>
++      <root url="jar://$MAVEN_REPOSITORY$/org/springframework/spring-jdbc/6.1.3/spring-jdbc-6.1.3-sources.jar!/" />
++    </SOURCES>
++  </library>
++</component>
+\ No newline at end of file
+Index: .idea/libraries/Spring_Batch_2_2_6.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/libraries/Spring_Batch_2_2_6.xml	(revision )
++++ .idea/libraries/Spring_Batch_2_2_6.xml	(revision )
+@@ -0,0 +1,11 @@
++<component name="libraryTable">
++  <library name="Spring Batch-2.2.6" type="spring-batch">
++    <properties version="2.2.6" />
++    <CLASSES>
++      <root url="jar://$PROJECT_DIR$/lib/spring-batch-infrastructure-2.2.6.RELEASE.jar!/" />
++      <root url="jar://$PROJECT_DIR$/lib/spring-batch-core-2.2.6.RELEASE.jar!/" />
++    </CLASSES>
++    <JAVADOC />
++    <SOURCES />
++  </library>
++</component>
+\ No newline at end of file
+Index: .idea/libraries/Maven__org_glassfish_jaxb_jaxb_runtime_4_0_2.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/libraries/Maven__org_glassfish_jaxb_jaxb_runtime_4_0_2.xml	(revision )
++++ .idea/libraries/Maven__org_glassfish_jaxb_jaxb_runtime_4_0_2.xml	(revision )
+@@ -0,0 +1,13 @@
++<component name="libraryTable">
++  <library name="Maven: org.glassfish.jaxb:jaxb-runtime:4.0.2">
++    <CLASSES>
++      <root url="jar://$MAVEN_REPOSITORY$/org/glassfish/jaxb/jaxb-runtime/4.0.2/jaxb-runtime-4.0.2.jar!/" />
++    </CLASSES>
++    <JAVADOC>
++      <root url="jar://$MAVEN_REPOSITORY$/org/glassfish/jaxb/jaxb-runtime/4.0.2/jaxb-runtime-4.0.2-javadoc.jar!/" />
++    </JAVADOC>
++    <SOURCES>
++      <root url="jar://$MAVEN_REPOSITORY$/org/glassfish/jaxb/jaxb-runtime/4.0.2/jaxb-runtime-4.0.2-sources.jar!/" />
++    </SOURCES>
++  </library>
++</component>
+\ No newline at end of file
+Index: .idea/libraries/Maven__org_springframework_spring_web_6_1_3.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/libraries/Maven__org_springframework_spring_web_6_1_3.xml	(revision )
++++ .idea/libraries/Maven__org_springframework_spring_web_6_1_3.xml	(revision )
+@@ -0,0 +1,13 @@
++<component name="libraryTable">
++  <library name="Maven: org.springframework:spring-web:6.1.3">
++    <CLASSES>
++      <root url="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/6.1.3/spring-web-6.1.3.jar!/" />
++    </CLASSES>
++    <JAVADOC>
++      <root url="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/6.1.3/spring-web-6.1.3-javadoc.jar!/" />
++    </JAVADOC>
++    <SOURCES>
++      <root url="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/6.1.3/spring-web-6.1.3-sources.jar!/" />
++    </SOURCES>
++  </library>
++</component>
+\ No newline at end of file
+Index: ../../.IntelliJIdea14/config/consoles/db/c5a8f917-6edd-4f93-9b6f-e1addaccb4ad/console.sql
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>windows-1251
+===================================================================
+--- ../../.IntelliJIdea14/config/consoles/db/c5a8f917-6edd-4f93-9b6f-e1addaccb4ad/console.sql	(revision )
++++ ../../.IntelliJIdea14/config/consoles/db/c5a8f917-6edd-4f93-9b6f-e1addaccb4ad/console.sql	(revision )
+@@ -0,0 +1,1 @@
++
+\ No newline at end of file
+Index: ../../.IntelliJIdea14/config/options/databaseSettings.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- ../../.IntelliJIdea14/config/options/databaseSettings.xml	(revision )
++++ ../../.IntelliJIdea14/config/options/databaseSettings.xml	(revision )
+@@ -0,0 +1,23 @@
++<application>
++  <component name="DatabaseSettings">
++    <text-mode>
++      <parameter-patterns>
++        <parameter-pattern value="?\d+" />
++        <parameter-pattern value=":\w+" />
++        <parameter-pattern value="%\w+" />
++        <parameter-pattern value="$\{[^$\{\}]*\}" />
++        <parameter-pattern value="$\w+$" />
++        <parameter-pattern value="#\w+#" />
++      </parameter-patterns>
++    </text-mode>
++    <extractors>
++      <std-extractor type="csv" name="Comma-separated Values (CSV)" />
++      <std-extractor type="tsv" name="Tab-separated Values (TSV)" />
++      <std-extractor type="html" name="HTML Table" />
++      <extractor type="sql-insert" name="SQL Insert Statements" />
++      <extractor type="sql-update" name="SQL Update Statements" />
++      <std-extractor type="xml" name="XML" />
++      <extractor type="json" name="JSON" />
++    </extractors>
++  </component>
++</application>
+\ No newline at end of file
+Index: .idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_15_3.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_15_3.xml	(revision )
++++ .idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_15_3.xml	(revision )
+@@ -0,0 +1,13 @@
++<component name="libraryTable">
++  <library name="Maven: com.fasterxml.jackson.core:jackson-databind:2.15.3">
++    <CLASSES>
++      <root url="jar://$MAVEN_REPOSITORY$/com/fasterxml/jackson/core/jackson-databind/2.15.3/jackson-databind-2.15.3.jar!/" />
++    </CLASSES>
++    <JAVADOC>
++      <root url="jar://$MAVEN_REPOSITORY$/com/fasterxml/jackson/core/jackson-databind/2.15.3/jackson-databind-2.15.3-javadoc.jar!/" />
++    </JAVADOC>
++    <SOURCES>
++      <root url="jar://$MAVEN_REPOSITORY$/com/fasterxml/jackson/core/jackson-databind/2.15.3/jackson-databind-2.15.3-sources.jar!/" />
++    </SOURCES>
++  </library>
++</component>
+\ No newline at end of file
+Index: ../helloWorld/src/helloworld/shape/Main.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>windows-1251
+===================================================================
+--- ../helloWorld/src/helloworld/shape/Main.java	(revision )
++++ ../helloWorld/src/helloworld/shape/Main.java	(revision )
+@@ -0,0 +1,81 @@
++package helloworld.shape;
++
++import MyCharSequence.AsciiCharSequence;
++import Timer.Timer;
++
++import java.math.BigDecimal;
++
++import static java.lang.Double.doubleToLongBits;
++
++/**
++ * Created by Gudilin on 19.03.2021.
++ */
++public class Main {
++
++    public static void main(String[] args) {
++        byte[] example = {72, 101, 108, 108, 111, 33};
++        AsciiCharSequence answer = new AsciiCharSequence(example);
++        System.out.println( "Sequenc - " + answer.toString());//Hello!
++        System.out.println("Sequenc.size- " + answer.length());//6
++        System.out.println("Symbol nomer 1 - " + answer.charAt(1));//e
++        System.out.println("SubSequence - " + answer.subSequence(1, 5));//ello
++//проверка на нарушение инкапсуляции private поля
++        System.out.println(answer.toString());//Hello!
++        example[0] = 74;
++        System.out.println(answer.toString());//Hello!
++
++        Timer timer = new Timer();
++
++        long time = timer.measureTime(new Runnable() {
++            @Override
++            public void run() {
++                new BigDecimal("123456").pow(1000);
++            }
++        });
++       // long time = timer.measureTime(()->new BigDecimal("123456").pow(1000););
++        System.out.println(time);
++
++        ComplexNumber a = new ComplexNumber(1, 1);
++        ComplexNumber b = new ComplexNumber(1, 1);
++
++        System.out.println("a.equals(b) = " + a.equals(b));
++        long bits = doubleToLongBits(1.0);
++        int as = (int)(bits ^ (bits >>> 32));
++        System.out.println("a.hashCode(b) = " + a.hashCode(b));
++
++        Circle circle = new Circle(new Point(0,0), 1, Color.BLACK );
++        Triangle triangle = new Triangle(new Point(0,0), new Point(1,0), new Point(0,1), Color.GREEN);
++        Square square = new Square(new Point(5,5), 2, Color.BLUE);
++
++        Shape shape = triangle;
++        Object object = triangle;
++        triangle = (Triangle)object;
++
++        Shape[] shapes = {circle,square,triangle};
++        printArrayElements(shapes);
++
++        Shape maxShape = findMaxShapeArea(shapes);
++        System.out.println("Shape with max area = " + maxShape);
++    }
++
++    public static void printArrayElements(Object[] objects){
++        for (int i = 0; i < objects.length; i++){
++            System.out.println(i + ": " + objects[i]);
++        }
++    }
++
++    public static Shape findMaxShapeArea(Shape[] shapes){
++        Shape maxShape = null;
++
++        double maxArea = Double.NEGATIVE_INFINITY;
++        for(Shape shape:shapes ){
++            double area = shape.getArea();
++            if (area > maxArea){
++                maxArea = area;
++                maxShape = shape;
++            }
++        }
++
++        return maxShape;
++    }
++}
+Index: .idea/libraries/Maven__org_glassfish_jaxb_jaxb_core_4_0_2.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/libraries/Maven__org_glassfish_jaxb_jaxb_core_4_0_2.xml	(revision )
++++ .idea/libraries/Maven__org_glassfish_jaxb_jaxb_core_4_0_2.xml	(revision )
+@@ -0,0 +1,13 @@
++<component name="libraryTable">
++  <library name="Maven: org.glassfish.jaxb:jaxb-core:4.0.2">
++    <CLASSES>
++      <root url="jar://$MAVEN_REPOSITORY$/org/glassfish/jaxb/jaxb-core/4.0.2/jaxb-core-4.0.2.jar!/" />
++    </CLASSES>
++    <JAVADOC>
++      <root url="jar://$MAVEN_REPOSITORY$/org/glassfish/jaxb/jaxb-core/4.0.2/jaxb-core-4.0.2-javadoc.jar!/" />
++    </JAVADOC>
++    <SOURCES>
++      <root url="jar://$MAVEN_REPOSITORY$/org/glassfish/jaxb/jaxb-core/4.0.2/jaxb-core-4.0.2-sources.jar!/" />
++    </SOURCES>
++  </library>
++</component>
+\ No newline at end of file
+Index: .idea/libraries/Maven__com_fasterxml_classmate_1_5_1.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/libraries/Maven__com_fasterxml_classmate_1_5_1.xml	(revision )
++++ .idea/libraries/Maven__com_fasterxml_classmate_1_5_1.xml	(revision )
+@@ -0,0 +1,13 @@
++<component name="libraryTable">
++  <library name="Maven: com.fasterxml:classmate:1.5.1">
++    <CLASSES>
++      <root url="jar://$MAVEN_REPOSITORY$/com/fasterxml/classmate/1.5.1/classmate-1.5.1.jar!/" />
++    </CLASSES>
++    <JAVADOC>
++      <root url="jar://$MAVEN_REPOSITORY$/com/fasterxml/classmate/1.5.1/classmate-1.5.1-javadoc.jar!/" />
++    </JAVADOC>
++    <SOURCES>
++      <root url="jar://$MAVEN_REPOSITORY$/com/fasterxml/classmate/1.5.1/classmate-1.5.1-sources.jar!/" />
++    </SOURCES>
++  </library>
++</component>
+\ No newline at end of file
+Index: .idea/libraries/Spring_MVC_5_2_3_RELEASE.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/libraries/Spring_MVC_5_2_3_RELEASE.xml	(revision )
++++ .idea/libraries/Spring_MVC_5_2_3_RELEASE.xml	(revision )
+@@ -0,0 +1,11 @@
++<component name="libraryTable">
++  <library name="Spring MVC-5.2.3.RELEASE" type="spring-mvc">
++    <properties version="5.2.3.RELEASE" />
++    <CLASSES>
++      <root url="jar://$PROJECT_DIR$/lib/spring-webmvc-5.2.3.RELEASE.jar!/" />
++      <root url="jar://$PROJECT_DIR$/lib/spring-web-5.2.3.RELEASE.jar!/" />
++    </CLASSES>
++    <JAVADOC />
++    <SOURCES />
++  </library>
++</component>
+\ No newline at end of file
+Index: .idea/libraries/Maven__org_springframework_boot_spring_boot_starter_logging_3_2_2.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/libraries/Maven__org_springframework_boot_spring_boot_starter_logging_3_2_2.xml	(revision )
++++ .idea/libraries/Maven__org_springframework_boot_spring_boot_starter_logging_3_2_2.xml	(revision )
+@@ -0,0 +1,13 @@
++<component name="libraryTable">
++  <library name="Maven: org.springframework.boot:spring-boot-starter-logging:3.2.2">
++    <CLASSES>
++      <root url="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-starter-logging/3.2.2/spring-boot-starter-logging-3.2.2.jar!/" />
++    </CLASSES>
++    <JAVADOC>
++      <root url="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-starter-logging/3.2.2/spring-boot-starter-logging-3.2.2-javadoc.jar!/" />
++    </JAVADOC>
++    <SOURCES>
++      <root url="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-starter-logging/3.2.2/spring-boot-starter-logging-3.2.2-sources.jar!/" />
++    </SOURCES>
++  </library>
++</component>
+\ No newline at end of file
+Index: .idea/libraries/Maven__org_checkerframework_checker_qual_3_42_0.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/libraries/Maven__org_checkerframework_checker_qual_3_42_0.xml	(revision )
++++ .idea/libraries/Maven__org_checkerframework_checker_qual_3_42_0.xml	(revision )
+@@ -0,0 +1,13 @@
++<component name="libraryTable">
++  <library name="Maven: org.checkerframework:checker-qual:3.42.0">
++    <CLASSES>
++      <root url="jar://$MAVEN_REPOSITORY$/org/checkerframework/checker-qual/3.42.0/checker-qual-3.42.0.jar!/" />
++    </CLASSES>
++    <JAVADOC>
++      <root url="jar://$MAVEN_REPOSITORY$/org/checkerframework/checker-qual/3.42.0/checker-qual-3.42.0-javadoc.jar!/" />
++    </JAVADOC>
++    <SOURCES>
++      <root url="jar://$MAVEN_REPOSITORY$/org/checkerframework/checker-qual/3.42.0/checker-qual-3.42.0-sources.jar!/" />
++    </SOURCES>
++  </library>
++</component>
+\ No newline at end of file
+Index: ../helloWorld/src/helloworld/shape/Circle.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>windows-1251
+===================================================================
+--- ../helloWorld/src/helloworld/shape/Circle.java	(revision )
++++ ../helloWorld/src/helloworld/shape/Circle.java	(revision )
+@@ -0,0 +1,31 @@
++package helloworld.shape;
++
++/**
++ * Created by Gudilin on 19.03.2021.
++ */
++public class Circle extends Shape {
++
++    private final Point center;
++    private final double radius;
++
++    public Circle(Point center, double radius, Color color ) {
++        super(color);
++        this.center = center;
++        this.radius = radius;
++    }
++
++    public Point getCenter(){return center;}
++    public double getRadius(){return radius;}
++
++    @Override
++    public double getArea(){ return radius*radius*Math.PI;}
++
++    @Override
++    public String toString(){
++        return "Circle("+
++                "center = " + center +
++                ", radisu = " + radius +
++                ", color = " + getColor()+
++                ")";
++    }
++}
+Index: src/main/java/com/example/myapp/repository/OwnerRepository.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>windows-1251
+===================================================================
+--- src/main/java/com/example/myapp/repository/OwnerRepository.java	(revision )
++++ src/main/java/com/example/myapp/repository/OwnerRepository.java	(revision )
+@@ -0,0 +1,14 @@
++package com.example.myapp.repository;
++
++/**
++ * Created by Gudilin on 26.02.2024.
++ */
++import com.example.myapp.model.Owner;
++import org.springframework.data.jpa.repository.JpaRepository;
++import org.springframework.stereotype.Repository;
++
++
++@Repository
++public interface OwnerRepository extends JpaRepository<Owner, Long> {
++// Здесь можно добавить дополнительные методы для запросов к базе данных, если необходимо
++}
+\ No newline at end of file
+Index: .idea/libraries/Maven__com_fasterxml_jackson_datatype_jackson_datatype_jdk8_2_15_3.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/libraries/Maven__com_fasterxml_jackson_datatype_jackson_datatype_jdk8_2_15_3.xml	(revision )
++++ .idea/libraries/Maven__com_fasterxml_jackson_datatype_jackson_datatype_jdk8_2_15_3.xml	(revision )
+@@ -0,0 +1,13 @@
++<component name="libraryTable">
++  <library name="Maven: com.fasterxml.jackson.datatype:jackson-datatype-jdk8:2.15.3">
++    <CLASSES>
++      <root url="jar://$MAVEN_REPOSITORY$/com/fasterxml/jackson/datatype/jackson-datatype-jdk8/2.15.3/jackson-datatype-jdk8-2.15.3.jar!/" />
++    </CLASSES>
++    <JAVADOC>
++      <root url="jar://$MAVEN_REPOSITORY$/com/fasterxml/jackson/datatype/jackson-datatype-jdk8/2.15.3/jackson-datatype-jdk8-2.15.3-javadoc.jar!/" />
++    </JAVADOC>
++    <SOURCES>
++      <root url="jar://$MAVEN_REPOSITORY$/com/fasterxml/jackson/datatype/jackson-datatype-jdk8/2.15.3/jackson-datatype-jdk8-2.15.3-sources.jar!/" />
++    </SOURCES>
++  </library>
++</component>
+\ No newline at end of file
+Index: src/main/java/com/example/myapp/controller/PetController.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>windows-1251
+===================================================================
+--- src/main/java/com/example/myapp/controller/PetController.java	(revision )
++++ src/main/java/com/example/myapp/controller/PetController.java	(revision )
+@@ -0,0 +1,60 @@
++package com.example.myapp.controller;
++
++/**
++ * Created by Gudilin on 26.02.2024.
++ */
++import com.example.myapp.model.Pets;
++import com.example.myapp.service.PetService;
++import org.springframework.beans.factory.annotation.Autowired;
++import org.springframework.web.bind.annotation.*;
++
++
++
++
++import java.util.List;
++
++
++@RestController
++@RequestMapping("/pets")
++public class PetController {
++
++
++    private final PetService petService;
++
++
++    @Autowired
++    public PetController(PetService petService) {
++        this.petService = petService;
++    }
++
++
++    @GetMapping
++    public List<Pets> getAllPets() {
++        return petService.getAllPets();
++    }
++
++
++    @GetMapping("/{id}")
++    public Pets getPetById(@PathVariable Long id) {
++        return petService.getPetById(id);
++    }
++
++
++    @PostMapping
++    public Pets createPet(@RequestBody Pets pet) {
++        return petService.createPet(pet);
++    }
++
++
++    @PutMapping("/{id}")
++    public Pets updatePet(@PathVariable Long id, @RequestBody Pets pet) {
++        pet.setId(id);
++        return petService.updatePet(pet);
++    }
++
++
++    @DeleteMapping("/{id}")
++    public void deletePet(@PathVariable Long id) {
++        petService.deletePet(id);
++    }
++}
+Index: .idea/libraries/Maven__jakarta_persistence_jakarta_persistence_api_3_1_0.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/libraries/Maven__jakarta_persistence_jakarta_persistence_api_3_1_0.xml	(revision )
++++ .idea/libraries/Maven__jakarta_persistence_jakarta_persistence_api_3_1_0.xml	(revision )
+@@ -0,0 +1,13 @@
++<component name="libraryTable">
++  <library name="Maven: jakarta.persistence:jakarta.persistence-api:3.1.0">
++    <CLASSES>
++      <root url="jar://$MAVEN_REPOSITORY$/jakarta/persistence/jakarta.persistence-api/3.1.0/jakarta.persistence-api-3.1.0.jar!/" />
++    </CLASSES>
++    <JAVADOC>
++      <root url="jar://$MAVEN_REPOSITORY$/jakarta/persistence/jakarta.persistence-api/3.1.0/jakarta.persistence-api-3.1.0-javadoc.jar!/" />
++    </JAVADOC>
++    <SOURCES>
++      <root url="jar://$MAVEN_REPOSITORY$/jakarta/persistence/jakarta.persistence-api/3.1.0/jakarta.persistence-api-3.1.0-sources.jar!/" />
++    </SOURCES>
++  </library>
++</component>
+\ No newline at end of file
+Index: .idea/libraries/Maven__org_springframework_spring_orm_6_1_3.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/libraries/Maven__org_springframework_spring_orm_6_1_3.xml	(revision )
++++ .idea/libraries/Maven__org_springframework_spring_orm_6_1_3.xml	(revision )
+@@ -0,0 +1,13 @@
++<component name="libraryTable">
++  <library name="Maven: org.springframework:spring-orm:6.1.3">
++    <CLASSES>
++      <root url="jar://$MAVEN_REPOSITORY$/org/springframework/spring-orm/6.1.3/spring-orm-6.1.3.jar!/" />
++    </CLASSES>
++    <JAVADOC>
++      <root url="jar://$MAVEN_REPOSITORY$/org/springframework/spring-orm/6.1.3/spring-orm-6.1.3-javadoc.jar!/" />
++    </JAVADOC>
++    <SOURCES>
++      <root url="jar://$MAVEN_REPOSITORY$/org/springframework/spring-orm/6.1.3/spring-orm-6.1.3-sources.jar!/" />
++    </SOURCES>
++  </library>
++</component>
+\ No newline at end of file
+Index: .idea/libraries/Maven__org_apache_logging_log4j_log4j_to_slf4j_2_21_1.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/libraries/Maven__org_apache_logging_log4j_log4j_to_slf4j_2_21_1.xml	(revision )
++++ .idea/libraries/Maven__org_apache_logging_log4j_log4j_to_slf4j_2_21_1.xml	(revision )
+@@ -0,0 +1,13 @@
++<component name="libraryTable">
++  <library name="Maven: org.apache.logging.log4j:log4j-to-slf4j:2.21.1">
++    <CLASSES>
++      <root url="jar://$MAVEN_REPOSITORY$/org/apache/logging/log4j/log4j-to-slf4j/2.21.1/log4j-to-slf4j-2.21.1.jar!/" />
++    </CLASSES>
++    <JAVADOC>
++      <root url="jar://$MAVEN_REPOSITORY$/org/apache/logging/log4j/log4j-to-slf4j/2.21.1/log4j-to-slf4j-2.21.1-javadoc.jar!/" />
++    </JAVADOC>
++    <SOURCES>
++      <root url="jar://$MAVEN_REPOSITORY$/org/apache/logging/log4j/log4j-to-slf4j/2.21.1/log4j-to-slf4j-2.21.1-sources.jar!/" />
++    </SOURCES>
++  </library>
++</component>
+\ No newline at end of file
+Index: .idea/libraries/Maven__jakarta_activation_jakarta_activation_api_2_1_0.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/libraries/Maven__jakarta_activation_jakarta_activation_api_2_1_0.xml	(revision )
++++ .idea/libraries/Maven__jakarta_activation_jakarta_activation_api_2_1_0.xml	(revision )
+@@ -0,0 +1,13 @@
++<component name="libraryTable">
++  <library name="Maven: jakarta.activation:jakarta.activation-api:2.1.0">
++    <CLASSES>
++      <root url="jar://$MAVEN_REPOSITORY$/jakarta/activation/jakarta.activation-api/2.1.0/jakarta.activation-api-2.1.0.jar!/" />
++    </CLASSES>
++    <JAVADOC>
++      <root url="jar://$MAVEN_REPOSITORY$/jakarta/activation/jakarta.activation-api/2.1.0/jakarta.activation-api-2.1.0-javadoc.jar!/" />
++    </JAVADOC>
++    <SOURCES>
++      <root url="jar://$MAVEN_REPOSITORY$/jakarta/activation/jakarta.activation-api/2.1.0/jakarta.activation-api-2.1.0-sources.jar!/" />
++    </SOURCES>
++  </library>
++</component>
+\ No newline at end of file
+Index: src/main/java/spring-config.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- src/main/java/spring-config.xml	(revision )
++++ src/main/java/spring-config.xml	(revision )
+@@ -0,0 +1,6 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<beans xmlns="http://www.springframework.org/schema/beans"
++       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
++       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
++
++</beans>
+\ No newline at end of file
+Index: ../helloWorld/src/helloworld/shape/ComplexNumber.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>windows-1251
+===================================================================
+--- ../helloWorld/src/helloworld/shape/ComplexNumber.java	(revision )
++++ ../helloWorld/src/helloworld/shape/ComplexNumber.java	(revision )
+@@ -0,0 +1,43 @@
++package helloworld.shape;
++
++/**
++ * Created by Gudilin on 19.03.2021.
++ */
++public final class ComplexNumber {
++    private final double re;
++    private final double im;
++
++    public ComplexNumber(double re, double im) {
++        this.re = re;
++        this.im = im;
++    }
++
++    public double getRe() {
++        return re;
++    }
++
++    public double getIm() {
++        return im;
++    }
++
++    public boolean equals(Object o) {
++        if (this == o) return true;
++        if (o == null || getClass() != o.getClass()) return false;
++
++        ComplexNumber that = (ComplexNumber) o;
++
++        if (Double.compare(that.getRe(), getRe()) != 0) return false;
++        return Double.compare(that.getIm(), getIm()) == 0;
++
++    }
++
++    public int hashCode(ComplexNumber b) {
++        int result;
++        long temp;
++        temp = Double.doubleToLongBits(getRe());
++        result = (int) (temp ^ (temp >>> 32));
++        temp = Double.doubleToLongBits(getIm());
++        result = 31 * result + (int) (temp ^ (temp >>> 32));
++        return result;
++    }
++}
+Index: ../helloWorld/src/CheckLabels/TestAnalyze.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>windows-1251
+===================================================================
+--- ../helloWorld/src/CheckLabels/TestAnalyze.java	(revision )
++++ ../helloWorld/src/CheckLabels/TestAnalyze.java	(revision )
+@@ -0,0 +1,24 @@
++package CheckLabels;
++
++/**
++ * Created by Gudilin on 19.03.2021.
++ */
++
++public class TestAnalyze {
++    public enum Label {
++        SPAM, NEGATIVE_TEXT, TOO_LONG, OK
++    }
++
++    public static void main(String[] args) {
++        // тестовые комментарии
++        String[] tests = new String[8];
++        tests[0] = "This comment is so good.";                            // OK
++        tests[1] = "This comment is so Loooooooooooooooooooooooooooong."; // TOO_LONG
++        tests[2] = "Very negative comment !!!!=(!!!!;";                   // NEGATIVE_TEXT
++        tests[3] = "Very BAAAAAAAAAAAAAAAAAAAAAAAAD comment with :|;";    // NEGATIVE_TEXT or TOO_LONG
++        tests[4] = "This comment is so bad....";                          // SPAM
++        tests[5] = "The comment is a spam, maybeeeeeeeeeeeeeeeeeeeeee!";  // SPAM or TOO_LONG
++        tests[6] = "Negative bad :( spam.";                               // SPAM or NEGATIVE_TEXT
++        tests[7] = "Very bad, very neg =(, very ..................";      // SPAM or NEGATIVE_TEXT or TOO_LONG
++    }
++}
+Index: .idea/dataSources.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/dataSources.xml	(revision )
++++ .idea/dataSources.xml	(revision )
+@@ -0,0 +1,12 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="DataSourceManagerImpl" format="xml" hash="2330979516">
++    <data-source source="LOCAL" name="PostgreSQL - postgres@localhost" uuid="5c8c4328-4568-4a25-a8e4-97c47e7b9924">
++      <driver-ref>postgresql</driver-ref>
++      <synchronize>true</synchronize>
++      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
++      <jdbc-url>jdbc:postgresql://localhost:5432/postgres</jdbc-url>
++      <libraries />
++    </data-source>
++  </component>
++</project>
+\ No newline at end of file
+Index: src/main/java/com/example/myapp/repository/PetRepository.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>windows-1251
+===================================================================
+--- src/main/java/com/example/myapp/repository/PetRepository.java	(revision )
++++ src/main/java/com/example/myapp/repository/PetRepository.java	(revision )
+@@ -0,0 +1,14 @@
++package com.example.myapp.repository;
++
++/**
++ * Created by Gudilin on 26.02.2024.
++ */
++import com.example.myapp.model.Pets;
++import org.springframework.data.jpa.repository.JpaRepository;
++import org.springframework.stereotype.Repository;
++
++
++@Repository
++public interface PetRepository extends JpaRepository<Pets, Long> {
++// Здесь можно добавить дополнительные методы для запросов к базе данных, если необходимо
++}
+Index: ../../.IntelliJIdea14/config/consoles/.history/db/5c8c4328-4568-4a25-a8e4-97c47e7b9924.sql
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>windows-1251
+===================================================================
+--- ../../.IntelliJIdea14/config/consoles/.history/db/5c8c4328-4568-4a25-a8e4-97c47e7b9924.sql	(revision )
++++ ../../.IntelliJIdea14/config/consoles/.history/db/5c8c4328-4568-4a25-a8e4-97c47e7b9924.sql	(revision )
+@@ -0,0 +1,48 @@
++CREATE TABLE owners (
++  owner_id SERIAL PRIMARY KEY,
++  name VARCHAR(100),
++  email VARCHAR(100),
++  phone VARCHAR(20)
++)
++;-- -. . -..- - / . -. - .-. -.--
++CREATE TABLE pets (
++  pet_id SERIAL PRIMARY KEY,
++  owner_id INTEGER REFERENCES owners(owner_id),
++  name VARCHAR(100),
++  animal_type VARCHAR(50),
++  breed VARCHAR(50),
++  age INTEGER,
++  vaccinations VARCHAR(100)
++)
++;-- -. . -..- - / . -. - .-. -.--
++INSERT INTO owners (name, email, phone)
++VALUES
++  ('Scott Turner', 'sturner@cpd.gov', '911'),
++  ('Michael Dooley', 'dooley@cpd.gov', '911'),
++  ('Sabrina Spellman', 'iamnotawitch@hotmail.com', '555-0117'),
++  ('Jon Snow', 'jonsnow@nightwatch.org', '555-1439'),
++  ('Joe Camber', 'castlerockcarservice@hotmail.com', '555-7125'),
++  ('Ellie Creed', 'misscreed@yahoo.com', '555-2559'),
++  ('Emily Elizabeth', 'ihateflorence@hotmail.com', '555-2559'),
++  ('Daenerys Targaryen', 'dracomama@veryhotmail.com', '555-0309'),
++  ('Vic', 'itslegalinpostap@somemail.com', '555-1335'),
++  ('Yorick Brown', 'lastman@hotmail.com', '555-0001')
++;-- -. . -..- - / . -. - .-. -.--
++INSERT INTO pets (owner_id, name, animal_type, breed, age, vaccinations)
++VALUES
++  (1, 'Hooch', 'dog', 'french mastiff', 11, 'all'),
++  (2, 'Jerry Lee', 'dog', 'german sheperd', 7, 'all'),
++  (3, 'Salem', 'cat', 'domestic cat', 500, 'none'),
++  (4, 'Ghost', 'dog', 'direwolf', 4, 'unknown'),
++  (5, 'Cujo', 'dog', 'saint bernard', 8, 'all, except rabies'),
++  (6, 'Church (Winston Churchill)', 'cat', 'domestic cat', 10, 'all'),
++  (7, 'Clifford', 'dog', 'big red dog', 2, 'unknown'),
++  (8, 'Viserion', 'dragon', 'dragon', 3, 'unknown'),
++  (8, 'Rhaegal', 'dragon', 'dragon', 3, 'unknown'),
++  (8, 'Drogon', 'dragon', 'dragon', 3, 'unknown'),
++  (9, 'Blood', 'dog', 'bobtail', 12, 'none'),
++  (10, 'Ampersant', 'monkey', 'capuchin', 4, 'all')
++;-- -. . -..- - / . -. - .-. -.--
++SELECT pts.name from pets pts WHERE owner_id > 10
++;-- -. . -..- - / . -. - .-. -.--
++SELECT pts.name from pets pts WHERE owner_id > 9
+\ No newline at end of file
+Index: .idea/libraries/Spring_Security_5_2_1.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/libraries/Spring_Security_5_2_1.xml	(revision )
++++ .idea/libraries/Spring_Security_5_2_1.xml	(revision )
+@@ -0,0 +1,24 @@
++<component name="libraryTable">
++  <library name="Spring Security-5.2.1" type="spring-security">
++    <properties version="5.2.1" />
++    <CLASSES>
++      <root url="jar://$PROJECT_DIR$/lib/spring-security-crypto/5.2.1.RELEASE/spring-security-crypto-5.2.1.RELEASE.jar!/" />
++      <root url="jar://$PROJECT_DIR$/lib/spring-security-cas/5.2.1.RELEASE/spring-security-cas-5.2.1.RELEASE.jar!/" />
++      <root url="jar://$PROJECT_DIR$/lib/spring-security-acl/5.2.1.RELEASE/spring-security-acl-5.2.1.RELEASE.jar!/" />
++      <root url="jar://$PROJECT_DIR$/lib/spring-security-messaging/5.2.1.RELEASE/spring-security-messaging-5.2.1.RELEASE.jar!/" />
++      <root url="jar://$PROJECT_DIR$/lib/spring-security-openid/5.2.1.RELEASE/spring-security-openid-5.2.1.RELEASE.jar!/" />
++      <root url="jar://$PROJECT_DIR$/lib/spring-security-oauth2-resource-server/5.2.1.RELEASE/spring-security-oauth2-resource-server-5.2.1.RELEASE.jar!/" />
++      <root url="jar://$PROJECT_DIR$/lib/spring-security-remoting/5.2.1.RELEASE/spring-security-remoting-5.2.1.RELEASE.jar!/" />
++      <root url="jar://$PROJECT_DIR$/lib/spring-security-taglibs/5.2.1.RELEASE/spring-security-taglibs-5.2.1.RELEASE.jar!/" />
++      <root url="jar://$PROJECT_DIR$/lib/spring-security-oauth2-core/5.2.1.RELEASE/spring-security-oauth2-core-5.2.1.RELEASE.jar!/" />
++      <root url="jar://$PROJECT_DIR$/lib/spring-security-test/5.2.1.RELEASE/spring-security-test-5.2.1.RELEASE.jar!/" />
++      <root url="jar://$PROJECT_DIR$/lib/spring-security-ldap/5.2.1.RELEASE/spring-security-ldap-5.2.1.RELEASE.jar!/" />
++      <root url="jar://$PROJECT_DIR$/lib/spring-security-aspects/5.2.1.RELEASE/spring-security-aspects-5.2.1.RELEASE.jar!/" />
++      <root url="jar://$PROJECT_DIR$/lib/spring-security-web/5.2.1.RELEASE/spring-security-web-5.2.1.RELEASE.jar!/" />
++      <root url="jar://$PROJECT_DIR$/lib/spring-security-core/5.2.1.RELEASE/spring-security-core-5.2.1.RELEASE.jar!/" />
++      <root url="jar://$PROJECT_DIR$/lib/spring-security-config/5.2.1.RELEASE/spring-security-config-5.2.1.RELEASE.jar!/" />
++    </CLASSES>
++    <JAVADOC />
++    <SOURCES />
++  </library>
++</component>
+\ No newline at end of file
+Index: .idea/libraries/Maven__io_micrometer_micrometer_observation_1_12_3.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/libraries/Maven__io_micrometer_micrometer_observation_1_12_3.xml	(revision )
++++ .idea/libraries/Maven__io_micrometer_micrometer_observation_1_12_3.xml	(revision )
+@@ -0,0 +1,13 @@
++<component name="libraryTable">
++  <library name="Maven: io.micrometer:micrometer-observation:1.12.3">
++    <CLASSES>
++      <root url="jar://$MAVEN_REPOSITORY$/io/micrometer/micrometer-observation/1.12.3/micrometer-observation-1.12.3.jar!/" />
++    </CLASSES>
++    <JAVADOC>
++      <root url="jar://$MAVEN_REPOSITORY$/io/micrometer/micrometer-observation/1.12.3/micrometer-observation-1.12.3-javadoc.jar!/" />
++    </JAVADOC>
++    <SOURCES>
++      <root url="jar://$MAVEN_REPOSITORY$/io/micrometer/micrometer-observation/1.12.3/micrometer-observation-1.12.3-sources.jar!/" />
++    </SOURCES>
++  </library>
++</component>
+\ No newline at end of file
+Index: src/main/java/com/example/myapp/controller/OwnerController.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>windows-1251
+===================================================================
+--- src/main/java/com/example/myapp/controller/OwnerController.java	(revision )
++++ src/main/java/com/example/myapp/controller/OwnerController.java	(revision )
+@@ -0,0 +1,60 @@
++package com.example.myapp.controller;
++
++/**
++ * Created by Gudilin on 26.02.2024.
++ */
++import com.example.myapp.model.Owner;
++import com.example.myapp.service.OwnerService;
++import org.springframework.beans.factory.annotation.Autowired;
++import org.springframework.web.bind.annotation.*;
++
++
++
++
++import java.util.List;
++
++
++@RestController
++@RequestMapping("/owners")
++public class OwnerController {
++
++
++    private final OwnerService ownerService;
++
++
++    @Autowired
++    public OwnerController(OwnerService ownerService) {
++        this.ownerService = ownerService;
++    }
++
++
++    @GetMapping
++    public List<Owner> getAllOwners() {
++        return ownerService.getAllOwners();
++    }
++
++
++    @GetMapping("/{id}")
++    public Owner getOwnerById(@PathVariable Long id) {
++        return ownerService.getOwnerById(id);
++    }
++
++
++    @PostMapping
++    public Owner createOwner(@RequestBody Owner owner) {
++        return ownerService.createOwner(owner);
++    }
++
++
++    @PutMapping("/{id}")
++    public Owner updateOwner(@PathVariable Long id, @RequestBody Owner owner) {
++        owner.setId(id);
++        return ownerService.updateOwner(owner);
++    }
++
++
++    @DeleteMapping("/{id}")
++    public void deleteOwner(@PathVariable Long id) {
++        ownerService.deleteOwner(id);
++    }
++}
+Index: ../helloWorld/src/helloworld/shape/Triangle.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>windows-1251
+===================================================================
+--- ../helloWorld/src/helloworld/shape/Triangle.java	(revision )
++++ ../helloWorld/src/helloworld/shape/Triangle.java	(revision )
+@@ -0,0 +1,33 @@
++package helloworld.shape;
++
++/**
++ * Created by Gudilin on 19.03.2021.
++ */
++public class Triangle extends Shape {
++
++    private final Point a;
++    private final Point b;
++    private final Point c;
++
++    public Triangle(Point a, Point b, Point c, Color color ) {
++        super(color);
++        this.a = a;
++        this.b = b;
++        this.c = c;
++    }
++
++    @Override
++    public double getArea(){
++        return Math.abs((a.getX()-c.getX())*(b.getY()-c.getY())-(b.getX()-c.getX())*(a.getY()-c.getY()))/2;
++    }
++
++    @Override
++    public String toString() {
++        return "Triangle{" +
++                "a=" + a +
++                ", b=" + b +
++                ", c=" + c +
++                ", color = " + getColor()+
++                '}';
++    }
++}
+Index: src/main/java/com/example/myapp/MyApp.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>windows-1251
+===================================================================
+--- src/main/java/com/example/myapp/MyApp.java	(revision )
++++ src/main/java/com/example/myapp/MyApp.java	(revision )
+@@ -0,0 +1,30 @@
++package com.example.myapp;
++
++import com.example.myapp.model.Owner;
++import com.example.myapp.model.Pets;
++import com.example.myapp.service.OwnerService;
++import com.example.myapp.service.PetService;
++import org.springframework.beans.factory.annotation.Autowired;
++import org.springframework.boot..CommandLineRunner;
++import org.springframework.boot.SpringApplication;
++import org.springframework.boot.autoconfigure.SpringBootApplication;*/
++import org.springframework.context.annotation.Bean;
++import org.springframework.boot.*;
++
++/**
++ * Created by Gudilin on 26.02.2024.
++ */
++@SpringBootApplication
++public class MyApp {
++
++
++    private final OwnerService ownerService;
++    private final PetService petService;
++
++
++    @Autowired
++    public MyApp(OwnerService ownerService, PetService petService) {
++        this.ownerService = ownerService;
++        this.petService = petService;
++    }
++}
+\ No newline at end of file
+Index: .idea/libraries/Maven__com_sun_istack_istack_commons_runtime_4_1_1.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/libraries/Maven__com_sun_istack_istack_commons_runtime_4_1_1.xml	(revision )
++++ .idea/libraries/Maven__com_sun_istack_istack_commons_runtime_4_1_1.xml	(revision )
+@@ -0,0 +1,13 @@
++<component name="libraryTable">
++  <library name="Maven: com.sun.istack:istack-commons-runtime:4.1.1">
++    <CLASSES>
++      <root url="jar://$MAVEN_REPOSITORY$/com/sun/istack/istack-commons-runtime/4.1.1/istack-commons-runtime-4.1.1.jar!/" />
++    </CLASSES>
++    <JAVADOC>
++      <root url="jar://$MAVEN_REPOSITORY$/com/sun/istack/istack-commons-runtime/4.1.1/istack-commons-runtime-4.1.1-javadoc.jar!/" />
++    </JAVADOC>
++    <SOURCES>
++      <root url="jar://$MAVEN_REPOSITORY$/com/sun/istack/istack-commons-runtime/4.1.1/istack-commons-runtime-4.1.1-sources.jar!/" />
++    </SOURCES>
++  </library>
++</component>
+\ No newline at end of file
+Index: ../../.IntelliJIdea14/config/consoles/db/5c8c4328-4568-4a25-a8e4-97c47e7b9924/console.sql
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>windows-1251
+===================================================================
+--- ../../.IntelliJIdea14/config/consoles/db/5c8c4328-4568-4a25-a8e4-97c47e7b9924/console.sql	(revision )
++++ ../../.IntelliJIdea14/config/consoles/db/5c8c4328-4568-4a25-a8e4-97c47e7b9924/console.sql	(revision )
+@@ -0,0 +1,50 @@
++CREATE TABLE owners (
++  owner_id SERIAL PRIMARY KEY,
++  name VARCHAR(100),
++  email VARCHAR(100),
++  phone VARCHAR(20)
++);
++
++
++CREATE TABLE pets (
++  pet_id SERIAL PRIMARY KEY,
++  owner_id INTEGER REFERENCES owners(owner_id),
++  name VARCHAR(100),
++  animal_type VARCHAR(50),
++  breed VARCHAR(50),
++  age INTEGER,
++  vaccinations VARCHAR(100)
++);
++
++
++INSERT INTO owners (name, email, phone)
++VALUES
++  ('Scott Turner', 'sturner@cpd.gov', '911'),
++  ('Michael Dooley', 'dooley@cpd.gov', '911'),
++  ('Sabrina Spellman', 'iamnotawitch@hotmail.com', '555-0117'),
++  ('Jon Snow', 'jonsnow@nightwatch.org', '555-1439'),
++  ('Joe Camber', 'castlerockcarservice@hotmail.com', '555-7125'),
++  ('Ellie Creed', 'misscreed@yahoo.com', '555-2559'),
++  ('Emily Elizabeth', 'ihateflorence@hotmail.com', '555-2559'),
++  ('Daenerys Targaryen', 'dracomama@veryhotmail.com', '555-0309'),
++  ('Vic', 'itslegalinpostap@somemail.com', '555-1335'),
++  ('Yorick Brown', 'lastman@hotmail.com', '555-0001');
++
++
++INSERT INTO pets (owner_id, name, animal_type, breed, age, vaccinations)
++VALUES
++  (1, 'Hooch', 'dog', 'french mastiff', 11, 'all'),
++  (2, 'Jerry Lee', 'dog', 'german sheperd', 7, 'all'),
++  (3, 'Salem', 'cat', 'domestic cat', 500, 'none'),
++  (4, 'Ghost', 'dog', 'direwolf', 4, 'unknown'),
++  (5, 'Cujo', 'dog', 'saint bernard', 8, 'all, except rabies'),
++  (6, 'Church (Winston Churchill)', 'cat', 'domestic cat', 10, 'all'),
++  (7, 'Clifford', 'dog', 'big red dog', 2, 'unknown'),
++  (8, 'Viserion', 'dragon', 'dragon', 3, 'unknown'),
++  (8, 'Rhaegal', 'dragon', 'dragon', 3, 'unknown'),
++  (8, 'Drogon', 'dragon', 'dragon', 3, 'unknown'),
++  (9, 'Blood', 'dog', 'bobtail', 12, 'none'),
++  (10, 'Ampersant', 'monkey', 'capuchin', 4, 'all');
++
++
++SELECT pts.name from pets pts WHERE owner_id > 9;
+\ No newline at end of file
+Index: .idea/libraries/Maven__org_springframework_boot_spring_boot_starter_json_3_2_2.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/libraries/Maven__org_springframework_boot_spring_boot_starter_json_3_2_2.xml	(revision )
++++ .idea/libraries/Maven__org_springframework_boot_spring_boot_starter_json_3_2_2.xml	(revision )
+@@ -0,0 +1,13 @@
++<component name="libraryTable">
++  <library name="Maven: org.springframework.boot:spring-boot-starter-json:3.2.2">
++    <CLASSES>
++      <root url="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-starter-json/3.2.2/spring-boot-starter-json-3.2.2.jar!/" />
++    </CLASSES>
++    <JAVADOC>
++      <root url="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-starter-json/3.2.2/spring-boot-starter-json-3.2.2-javadoc.jar!/" />
++    </JAVADOC>
++    <SOURCES>
++      <root url="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-starter-json/3.2.2/spring-boot-starter-json-3.2.2-sources.jar!/" />
++    </SOURCES>
++  </library>
++</component>
+\ No newline at end of file
+Index: .idea/libraries/Maven__org_springframework_spring_webmvc_6_1_3.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/libraries/Maven__org_springframework_spring_webmvc_6_1_3.xml	(revision )
++++ .idea/libraries/Maven__org_springframework_spring_webmvc_6_1_3.xml	(revision )
+@@ -0,0 +1,13 @@
++<component name="libraryTable">
++  <library name="Maven: org.springframework:spring-webmvc:6.1.3">
++    <CLASSES>
++      <root url="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/6.1.3/spring-webmvc-6.1.3.jar!/" />
++    </CLASSES>
++    <JAVADOC>
++      <root url="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/6.1.3/spring-webmvc-6.1.3-javadoc.jar!/" />
++    </JAVADOC>
++    <SOURCES>
++      <root url="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/6.1.3/spring-webmvc-6.1.3-sources.jar!/" />
++    </SOURCES>
++  </library>
++</component>
+\ No newline at end of file
+Index: .idea/libraries/Maven__org_springframework_boot_spring_boot_starter_data_jpa_3_2_2.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/libraries/Maven__org_springframework_boot_spring_boot_starter_data_jpa_3_2_2.xml	(revision )
++++ .idea/libraries/Maven__org_springframework_boot_spring_boot_starter_data_jpa_3_2_2.xml	(revision )
+@@ -0,0 +1,13 @@
++<component name="libraryTable">
++  <library name="Maven: org.springframework.boot:spring-boot-starter-data-jpa:3.2.2">
++    <CLASSES>
++      <root url="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-starter-data-jpa/3.2.2/spring-boot-starter-data-jpa-3.2.2.jar!/" />
++    </CLASSES>
++    <JAVADOC>
++      <root url="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-starter-data-jpa/3.2.2/spring-boot-starter-data-jpa-3.2.2-javadoc.jar!/" />
++    </JAVADOC>
++    <SOURCES>
++      <root url="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-starter-data-jpa/3.2.2/spring-boot-starter-data-jpa-3.2.2-sources.jar!/" />
++    </SOURCES>
++  </library>
++</component>
+\ No newline at end of file
+Index: .idea/libraries/Maven__org_springframework_data_spring_data_commons_3_2_2.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/libraries/Maven__org_springframework_data_spring_data_commons_3_2_2.xml	(revision )
++++ .idea/libraries/Maven__org_springframework_data_spring_data_commons_3_2_2.xml	(revision )
+@@ -0,0 +1,13 @@
++<component name="libraryTable">
++  <library name="Maven: org.springframework.data:spring-data-commons:3.2.2">
++    <CLASSES>
++      <root url="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-commons/3.2.2/spring-data-commons-3.2.2.jar!/" />
++    </CLASSES>
++    <JAVADOC>
++      <root url="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-commons/3.2.2/spring-data-commons-3.2.2-javadoc.jar!/" />
++    </JAVADOC>
++    <SOURCES>
++      <root url="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-commons/3.2.2/spring-data-commons-3.2.2-sources.jar!/" />
++    </SOURCES>
++  </library>
++</component>
+\ No newline at end of file
+Index: .idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_core_10_1_18.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_core_10_1_18.xml	(revision )
++++ .idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_core_10_1_18.xml	(revision )
+@@ -0,0 +1,13 @@
++<component name="libraryTable">
++  <library name="Maven: org.apache.tomcat.embed:tomcat-embed-core:10.1.18">
++    <CLASSES>
++      <root url="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-core/10.1.18/tomcat-embed-core-10.1.18.jar!/" />
++    </CLASSES>
++    <JAVADOC>
++      <root url="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-core/10.1.18/tomcat-embed-core-10.1.18-javadoc.jar!/" />
++    </JAVADOC>
++    <SOURCES>
++      <root url="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-core/10.1.18/tomcat-embed-core-10.1.18-sources.jar!/" />
++    </SOURCES>
++  </library>
++</component>
+\ No newline at end of file
+Index: .idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_15_3.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_15_3.xml	(revision )
++++ .idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_15_3.xml	(revision )
+@@ -0,0 +1,13 @@
++<component name="libraryTable">
++  <library name="Maven: com.fasterxml.jackson.core:jackson-core:2.15.3">
++    <CLASSES>
++      <root url="jar://$MAVEN_REPOSITORY$/com/fasterxml/jackson/core/jackson-core/2.15.3/jackson-core-2.15.3.jar!/" />
++    </CLASSES>
++    <JAVADOC>
++      <root url="jar://$MAVEN_REPOSITORY$/com/fasterxml/jackson/core/jackson-core/2.15.3/jackson-core-2.15.3-javadoc.jar!/" />
++    </JAVADOC>
++    <SOURCES>
++      <root url="jar://$MAVEN_REPOSITORY$/com/fasterxml/jackson/core/jackson-core/2.15.3/jackson-core-2.15.3-sources.jar!/" />
++    </SOURCES>
++  </library>
++</component>
+\ No newline at end of file
+Index: .idea/libraries/Maven__org_postgresql_postgresql_42_7_2.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/libraries/Maven__org_postgresql_postgresql_42_7_2.xml	(revision )
++++ .idea/libraries/Maven__org_postgresql_postgresql_42_7_2.xml	(revision )
+@@ -0,0 +1,13 @@
++<component name="libraryTable">
++  <library name="Maven: org.postgresql:postgresql:42.7.2">
++    <CLASSES>
++      <root url="jar://$MAVEN_REPOSITORY$/org/postgresql/postgresql/42.7.2/postgresql-42.7.2.jar!/" />
++    </CLASSES>
++    <JAVADOC>
++      <root url="jar://$MAVEN_REPOSITORY$/org/postgresql/postgresql/42.7.2/postgresql-42.7.2-javadoc.jar!/" />
++    </JAVADOC>
++    <SOURCES>
++      <root url="jar://$MAVEN_REPOSITORY$/org/postgresql/postgresql/42.7.2/postgresql-42.7.2-sources.jar!/" />
++    </SOURCES>
++  </library>
++</component>
+\ No newline at end of file
+Index: .idea/libraries/Maven__org_springframework_boot_spring_boot_starter_3_2_2.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/libraries/Maven__org_springframework_boot_spring_boot_starter_3_2_2.xml	(revision )
++++ .idea/libraries/Maven__org_springframework_boot_spring_boot_starter_3_2_2.xml	(revision )
+@@ -0,0 +1,13 @@
++<component name="libraryTable">
++  <library name="Maven: org.springframework.boot:spring-boot-starter:3.2.2">
++    <CLASSES>
++      <root url="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-starter/3.2.2/spring-boot-starter-3.2.2.jar!/" />
++    </CLASSES>
++    <JAVADOC>
++      <root url="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-starter/3.2.2/spring-boot-starter-3.2.2-javadoc.jar!/" />
++    </JAVADOC>
++    <SOURCES>
++      <root url="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-starter/3.2.2/spring-boot-starter-3.2.2-sources.jar!/" />
++    </SOURCES>
++  </library>
++</component>
+\ No newline at end of file
+Index: ../../.IntelliJIdea14/config/options/runner.layout.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- ../../.IntelliJIdea14/config/options/runner.layout.xml	(revision )
++++ ../../.IntelliJIdea14/config/options/runner.layout.xml	(revision )
+@@ -0,0 +1,37 @@
++<application>
++  <component name="RunnerLayoutSettings">
++    <runner id="PostgreSQL - postgres@localhost">
++      <ViewImpl>
++        <option name="ID" value="Input" />
++        <option name="minimizedInGrid" value="false" />
++        <option name="placeInGrid" value="center" />
++        <option name="tabIndex" value="0" />
++        <option name="window" value="0" />
++      </ViewImpl>
++      <ViewImpl>
++        <option name="ID" value="ResultTab" />
++        <option name="minimizedInGrid" value="false" />
++        <option name="placeInGrid" value="center" />
++        <option name="tabIndex" value="0" />
++        <option name="window" value="0" />
++      </ViewImpl>
++      <TabImpl>
++        <option name="displayName" value="Database Console" />
++      </TabImpl>
++      <General />
++    </runner>
++    <runner id="PostgreSQL - postgres@127.0.0.1">
++      <ViewImpl>
++        <option name="ID" value="Input" />
++        <option name="minimizedInGrid" value="false" />
++        <option name="placeInGrid" value="center" />
++        <option name="tabIndex" value="0" />
++        <option name="window" value="0" />
++      </ViewImpl>
++      <TabImpl>
++        <option name="displayName" value="Database Console" />
++      </TabImpl>
++      <General />
++    </runner>
++  </component>
++</application>
+\ No newline at end of file
+Index: .idea/libraries/Maven__jakarta_transaction_jakarta_transaction_api_2_0_1.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/libraries/Maven__jakarta_transaction_jakarta_transaction_api_2_0_1.xml	(revision )
++++ .idea/libraries/Maven__jakarta_transaction_jakarta_transaction_api_2_0_1.xml	(revision )
+@@ -0,0 +1,13 @@
++<component name="libraryTable">
++  <library name="Maven: jakarta.transaction:jakarta.transaction-api:2.0.1">
++    <CLASSES>
++      <root url="jar://$MAVEN_REPOSITORY$/jakarta/transaction/jakarta.transaction-api/2.0.1/jakarta.transaction-api-2.0.1.jar!/" />
++    </CLASSES>
++    <JAVADOC>
++      <root url="jar://$MAVEN_REPOSITORY$/jakarta/transaction/jakarta.transaction-api/2.0.1/jakarta.transaction-api-2.0.1-javadoc.jar!/" />
++    </JAVADOC>
++    <SOURCES>
++      <root url="jar://$MAVEN_REPOSITORY$/jakarta/transaction/jakarta.transaction-api/2.0.1/jakarta.transaction-api-2.0.1-sources.jar!/" />
++    </SOURCES>
++  </library>
++</component>
+\ No newline at end of file
+Index: .idea/libraries/Maven__org_springframework_data_spring_data_jpa_3_2_2.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/libraries/Maven__org_springframework_data_spring_data_jpa_3_2_2.xml	(revision )
++++ .idea/libraries/Maven__org_springframework_data_spring_data_jpa_3_2_2.xml	(revision )
+@@ -0,0 +1,13 @@
++<component name="libraryTable">
++  <library name="Maven: org.springframework.data:spring-data-jpa:3.2.2">
++    <CLASSES>
++      <root url="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-jpa/3.2.2/spring-data-jpa-3.2.2.jar!/" />
++    </CLASSES>
++    <JAVADOC>
++      <root url="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-jpa/3.2.2/spring-data-jpa-3.2.2-javadoc.jar!/" />
++    </JAVADOC>
++    <SOURCES>
++      <root url="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-jpa/3.2.2/spring-data-jpa-3.2.2-sources.jar!/" />
++    </SOURCES>
++  </library>
++</component>
+\ No newline at end of file
+Index: .idea/libraries/Maven__org_springframework_boot_spring_boot_starter_web_3_2_2.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/libraries/Maven__org_springframework_boot_spring_boot_starter_web_3_2_2.xml	(revision )
++++ .idea/libraries/Maven__org_springframework_boot_spring_boot_starter_web_3_2_2.xml	(revision )
+@@ -0,0 +1,13 @@
++<component name="libraryTable">
++  <library name="Maven: org.springframework.boot:spring-boot-starter-web:3.2.2">
++    <CLASSES>
++      <root url="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-starter-web/3.2.2/spring-boot-starter-web-3.2.2.jar!/" />
++    </CLASSES>
++    <JAVADOC>
++      <root url="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-starter-web/3.2.2/spring-boot-starter-web-3.2.2-javadoc.jar!/" />
++    </JAVADOC>
++    <SOURCES>
++      <root url="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-starter-web/3.2.2/spring-boot-starter-web-3.2.2-sources.jar!/" />
++    </SOURCES>
++  </library>
++</component>
+\ No newline at end of file
+Index: .idea/libraries/Spring_Webflow_2_4_0.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/libraries/Spring_Webflow_2_4_0.xml	(revision )
++++ .idea/libraries/Spring_Webflow_2_4_0.xml	(revision )
+@@ -0,0 +1,14 @@
++<component name="libraryTable">
++  <library name="Spring Webflow-2.4.0" type="spring-webflow">
++    <properties version="2.4.0" />
++    <CLASSES>
++      <root url="jar://$PROJECT_DIR$/lib/spring-faces-2.4.0.RELEASE.jar!/" />
++      <root url="jar://$PROJECT_DIR$/lib/spring-binding-2.4.0.RELEASE.jar!/" />
++      <root url="jar://$PROJECT_DIR$/lib/spring-js-2.4.0.RELEASE.jar!/" />
++      <root url="jar://$PROJECT_DIR$/lib/spring-webflow-2.4.0.RELEASE.jar!/" />
++      <root url="jar://$PROJECT_DIR$/lib/spring-js-resources-2.4.0.RELEASE.jar!/" />
++    </CLASSES>
++    <JAVADOC />
++    <SOURCES />
++  </library>
++</component>
+\ No newline at end of file
+Index: .idea/libraries/Maven__org_springframework_spring_jcl_6_1_4.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/libraries/Maven__org_springframework_spring_jcl_6_1_4.xml	(revision )
++++ .idea/libraries/Maven__org_springframework_spring_jcl_6_1_4.xml	(revision )
+@@ -0,0 +1,13 @@
++<component name="libraryTable">
++  <library name="Maven: org.springframework:spring-jcl:6.1.4">
++    <CLASSES>
++      <root url="jar://$MAVEN_REPOSITORY$/org/springframework/spring-jcl/6.1.4/spring-jcl-6.1.4.jar!/" />
++    </CLASSES>
++    <JAVADOC>
++      <root url="jar://$MAVEN_REPOSITORY$/org/springframework/spring-jcl/6.1.4/spring-jcl-6.1.4-javadoc.jar!/" />
++    </JAVADOC>
++    <SOURCES>
++      <root url="jar://$MAVEN_REPOSITORY$/org/springframework/spring-jcl/6.1.4/spring-jcl-6.1.4-sources.jar!/" />
++    </SOURCES>
++  </library>
++</component>
+\ No newline at end of file
+Index: .idea/libraries/Maven__org_glassfish_jaxb_txw2_4_0_2.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/libraries/Maven__org_glassfish_jaxb_txw2_4_0_2.xml	(revision )
++++ .idea/libraries/Maven__org_glassfish_jaxb_txw2_4_0_2.xml	(revision )
+@@ -0,0 +1,13 @@
++<component name="libraryTable">
++  <library name="Maven: org.glassfish.jaxb:txw2:4.0.2">
++    <CLASSES>
++      <root url="jar://$MAVEN_REPOSITORY$/org/glassfish/jaxb/txw2/4.0.2/txw2-4.0.2.jar!/" />
++    </CLASSES>
++    <JAVADOC>
++      <root url="jar://$MAVEN_REPOSITORY$/org/glassfish/jaxb/txw2/4.0.2/txw2-4.0.2-javadoc.jar!/" />
++    </JAVADOC>
++    <SOURCES>
++      <root url="jar://$MAVEN_REPOSITORY$/org/glassfish/jaxb/txw2/4.0.2/txw2-4.0.2-sources.jar!/" />
++    </SOURCES>
++  </library>
++</component>
+\ No newline at end of file
+Index: .idea/libraries/Maven__org_springframework_boot_spring_boot_starter_parent_1_5_10_RELEASE.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/libraries/Maven__org_springframework_boot_spring_boot_starter_parent_1_5_10_RELEASE.xml	(revision )
++++ .idea/libraries/Maven__org_springframework_boot_spring_boot_starter_parent_1_5_10_RELEASE.xml	(revision )
+@@ -0,0 +1,13 @@
++<component name="libraryTable">
++  <library name="Maven: org.springframework.boot:spring-boot-starter-parent:1.5.10.RELEASE">
++    <CLASSES>
++      <root url="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-starter-parent/1.5.10.RELEASE/spring-boot-starter-parent-1.5.10.RELEASE.jar!/" />
++    </CLASSES>
++    <JAVADOC>
++      <root url="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-starter-parent/1.5.10.RELEASE/spring-boot-starter-parent-1.5.10.RELEASE-javadoc.jar!/" />
++    </JAVADOC>
++    <SOURCES>
++      <root url="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-starter-parent/1.5.10.RELEASE/spring-boot-starter-parent-1.5.10.RELEASE-sources.jar!/" />
++    </SOURCES>
++  </library>
++</component>
+\ No newline at end of file
+Index: ../../.IntelliJIdea14/config/options/security.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- ../../.IntelliJIdea14/config/options/security.xml	(revision )
++++ ../../.IntelliJIdea14/config/options/security.xml	(revision )
+@@ -0,0 +1,18 @@
++<application>
++  <component name="PasswordDatabase">
++    <option name="PASSWORDS">
++      <array>
++        <array>
++          <option value="a49430412328b3ead28d0a35351896c5a902d597ae4be48c2585dc28558916b8" />
++          <option value="31ed89f9cf2cb7d16ef350f4faf97a2f79253712e383c9721604ac4310921766" />
++          <option value="5ec8a8d154aad996bc04b627cc6bb119356a4f9dc1d3419c0c3d04b65e105413" />
++        </array>
++        <array>
++          <option value="9b7de6abf868cdc370973defdb00b6026e52c4853a4aa1343d0b3b58eacd95b5" />
++          <option value="f69c7e3509ce76b7d9ceee431ab9b99b" />
++          <option value="f69c7e3509ce76b7d9ceee431ab9b99b" />
++        </array>
++      </array>
++    </option>
++  </component>
++</application>
+\ No newline at end of file
+Index: ../helloWorld/src/helloworld/shape/Color.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>windows-1251
+===================================================================
+--- ../helloWorld/src/helloworld/shape/Color.java	(revision )
++++ ../helloWorld/src/helloworld/shape/Color.java	(revision )
+@@ -0,0 +1,12 @@
++package helloworld.shape;
++
++/**
++ * Created by Gudilin on 19.03.2021.
++ */
++public enum Color {
++    BLACK,
++    WHITE,
++    RED,
++    GREEN,
++    BLUE
++}
+Index: .idea/libraries/Maven__org_springframework_boot_spring_boot_3_2_2.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/libraries/Maven__org_springframework_boot_spring_boot_3_2_2.xml	(revision )
++++ .idea/libraries/Maven__org_springframework_boot_spring_boot_3_2_2.xml	(revision )
+@@ -0,0 +1,13 @@
++<component name="libraryTable">
++  <library name="Maven: org.springframework.boot:spring-boot:3.2.2">
++    <CLASSES>
++      <root url="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot/3.2.2/spring-boot-3.2.2.jar!/" />
++    </CLASSES>
++    <JAVADOC>
++      <root url="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot/3.2.2/spring-boot-3.2.2-javadoc.jar!/" />
++    </JAVADOC>
++    <SOURCES>
++      <root url="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot/3.2.2/spring-boot-3.2.2-sources.jar!/" />
++    </SOURCES>
++  </library>
++</component>
+\ No newline at end of file
+Index: .idea/libraries/Maven__org_yaml_snakeyaml_2_2.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/libraries/Maven__org_yaml_snakeyaml_2_2.xml	(revision )
++++ .idea/libraries/Maven__org_yaml_snakeyaml_2_2.xml	(revision )
+@@ -0,0 +1,13 @@
++<component name="libraryTable">
++  <library name="Maven: org.yaml:snakeyaml:2.2">
++    <CLASSES>
++      <root url="jar://$MAVEN_REPOSITORY$/org/yaml/snakeyaml/2.2/snakeyaml-2.2.jar!/" />
++    </CLASSES>
++    <JAVADOC>
++      <root url="jar://$MAVEN_REPOSITORY$/org/yaml/snakeyaml/2.2/snakeyaml-2.2-javadoc.jar!/" />
++    </JAVADOC>
++    <SOURCES>
++      <root url="jar://$MAVEN_REPOSITORY$/org/yaml/snakeyaml/2.2/snakeyaml-2.2-sources.jar!/" />
++    </SOURCES>
++  </library>
++</component>
+\ No newline at end of file
+Index: .idea/libraries/Maven__org_springframework_boot_spring_boot_starter_jdbc_3_2_2.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/libraries/Maven__org_springframework_boot_spring_boot_starter_jdbc_3_2_2.xml	(revision )
++++ .idea/libraries/Maven__org_springframework_boot_spring_boot_starter_jdbc_3_2_2.xml	(revision )
+@@ -0,0 +1,13 @@
++<component name="libraryTable">
++  <library name="Maven: org.springframework.boot:spring-boot-starter-jdbc:3.2.2">
++    <CLASSES>
++      <root url="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-starter-jdbc/3.2.2/spring-boot-starter-jdbc-3.2.2.jar!/" />
++    </CLASSES>
++    <JAVADOC>
++      <root url="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-starter-jdbc/3.2.2/spring-boot-starter-jdbc-3.2.2-javadoc.jar!/" />
++    </JAVADOC>
++    <SOURCES>
++      <root url="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-starter-jdbc/3.2.2/spring-boot-starter-jdbc-3.2.2-sources.jar!/" />
++    </SOURCES>
++  </library>
++</component>
+\ No newline at end of file
+Index: .idea/libraries/Maven__ch_qos_logback_logback_classic_1_4_14.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/libraries/Maven__ch_qos_logback_logback_classic_1_4_14.xml	(revision )
++++ .idea/libraries/Maven__ch_qos_logback_logback_classic_1_4_14.xml	(revision )
+@@ -0,0 +1,13 @@
++<component name="libraryTable">
++  <library name="Maven: ch.qos.logback:logback-classic:1.4.14">
++    <CLASSES>
++      <root url="jar://$MAVEN_REPOSITORY$/ch/qos/logback/logback-classic/1.4.14/logback-classic-1.4.14.jar!/" />
++    </CLASSES>
++    <JAVADOC>
++      <root url="jar://$MAVEN_REPOSITORY$/ch/qos/logback/logback-classic/1.4.14/logback-classic-1.4.14-javadoc.jar!/" />
++    </JAVADOC>
++    <SOURCES>
++      <root url="jar://$MAVEN_REPOSITORY$/ch/qos/logback/logback-classic/1.4.14/logback-classic-1.4.14-sources.jar!/" />
++    </SOURCES>
++  </library>
++</component>
+\ No newline at end of file
+Index: .idea/libraries/Maven__org_hibernate_common_hibernate_commons_annotations_6_0_6_Final.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/libraries/Maven__org_hibernate_common_hibernate_commons_annotations_6_0_6_Final.xml	(revision )
++++ .idea/libraries/Maven__org_hibernate_common_hibernate_commons_annotations_6_0_6_Final.xml	(revision )
+@@ -0,0 +1,13 @@
++<component name="libraryTable">
++  <library name="Maven: org.hibernate.common:hibernate-commons-annotations:6.0.6.Final">
++    <CLASSES>
++      <root url="jar://$MAVEN_REPOSITORY$/org/hibernate/common/hibernate-commons-annotations/6.0.6.Final/hibernate-commons-annotations-6.0.6.Final.jar!/" />
++    </CLASSES>
++    <JAVADOC>
++      <root url="jar://$MAVEN_REPOSITORY$/org/hibernate/common/hibernate-commons-annotations/6.0.6.Final/hibernate-commons-annotations-6.0.6.Final-javadoc.jar!/" />
++    </JAVADOC>
++    <SOURCES>
++      <root url="jar://$MAVEN_REPOSITORY$/org/hibernate/common/hibernate-commons-annotations/6.0.6.Final/hibernate-commons-annotations-6.0.6.Final-sources.jar!/" />
++    </SOURCES>
++  </library>
++</component>
+\ No newline at end of file
+Index: .idea/libraries/Maven__org_eclipse_angus_angus_activation_2_0_0.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/libraries/Maven__org_eclipse_angus_angus_activation_2_0_0.xml	(revision )
++++ .idea/libraries/Maven__org_eclipse_angus_angus_activation_2_0_0.xml	(revision )
+@@ -0,0 +1,13 @@
++<component name="libraryTable">
++  <library name="Maven: org.eclipse.angus:angus-activation:2.0.0">
++    <CLASSES>
++      <root url="jar://$MAVEN_REPOSITORY$/org/eclipse/angus/angus-activation/2.0.0/angus-activation-2.0.0.jar!/" />
++    </CLASSES>
++    <JAVADOC>
++      <root url="jar://$MAVEN_REPOSITORY$/org/eclipse/angus/angus-activation/2.0.0/angus-activation-2.0.0-javadoc.jar!/" />
++    </JAVADOC>
++    <SOURCES>
++      <root url="jar://$MAVEN_REPOSITORY$/org/eclipse/angus/angus-activation/2.0.0/angus-activation-2.0.0-sources.jar!/" />
++    </SOURCES>
++  </library>
++</component>
+\ No newline at end of file
+Index: .idea/libraries/Maven__com_fasterxml_jackson_module_jackson_module_parameter_names_2_15_3.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/libraries/Maven__com_fasterxml_jackson_module_jackson_module_parameter_names_2_15_3.xml	(revision )
++++ .idea/libraries/Maven__com_fasterxml_jackson_module_jackson_module_parameter_names_2_15_3.xml	(revision )
+@@ -0,0 +1,13 @@
++<component name="libraryTable">
++  <library name="Maven: com.fasterxml.jackson.module:jackson-module-parameter-names:2.15.3">
++    <CLASSES>
++      <root url="jar://$MAVEN_REPOSITORY$/com/fasterxml/jackson/module/jackson-module-parameter-names/2.15.3/jackson-module-parameter-names-2.15.3.jar!/" />
++    </CLASSES>
++    <JAVADOC>
++      <root url="jar://$MAVEN_REPOSITORY$/com/fasterxml/jackson/module/jackson-module-parameter-names/2.15.3/jackson-module-parameter-names-2.15.3-javadoc.jar!/" />
++    </JAVADOC>
++    <SOURCES>
++      <root url="jar://$MAVEN_REPOSITORY$/com/fasterxml/jackson/module/jackson-module-parameter-names/2.15.3/jackson-module-parameter-names-2.15.3-sources.jar!/" />
++    </SOURCES>
++  </library>
++</component>
+\ No newline at end of file
+Index: src/main/java/com/example/myapp/service/PetService.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>windows-1251
+===================================================================
+--- src/main/java/com/example/myapp/service/PetService.java	(revision )
++++ src/main/java/com/example/myapp/service/PetService.java	(revision )
+@@ -0,0 +1,51 @@
++package com.example.myapp.service;
++
++/**
++ * Created by Gudilin on 26.02.2024.
++ */
++import com.example.myapp.model.Pets;
++import com.example.myapp.repository.PetRepository;
++import org.springframework.beans.factory.annotation.Autowired;
++import org.springframework.stereotype.Service;
++
++
++import java.util.List;
++
++
++@Service
++public class PetService {
++
++
++    private final PetRepository petRepository;
++
++
++    @Autowired
++    public PetService(PetRepository petRepository) {
++        this.petRepository = petRepository;
++    }
++
++
++    public List<Pets> getAllPets() {
++        return petRepository.findAll();
++    }
++
++
++    public Pets getPetById(Long id) {
++        return petRepository.findById(id).orElse(null);
++    }
++
++
++    public Pets createPet(Pets pet) {
++        return petRepository.save(pet);
++    }
++
++
++    public Pets updatePet(Pets pet) {
++        return petRepository.save(pet);
++    }
++
++
++    public void deletePet(Long id) {
++        petRepository.deleteById(id);
++    }
++}
+\ No newline at end of file
+Index: src/main/resources/applications.properties
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>windows-1251
+===================================================================
+--- src/main/resources/applications.properties	(revision )
++++ src/main/resources/applications.properties	(revision )
+@@ -0,0 +1,12 @@
++# PostgreSQL
++spring.datasource.url=jdbc:postgresql://localhost:5432/postgres
++spring.datasource.username=postgres
++spring.datasource.password=110383
++
++# Hibernate
++spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect
++spring.jpa.hibernate.ddl-auto=update
++
++# Spring Boot
++spring.application.name=my-awesome-pet-owners-app
++server.port=8080
+\ No newline at end of file
+Index: .idea/libraries/Maven__jakarta_xml_bind_jakarta_xml_bind_api_4_0_0.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/libraries/Maven__jakarta_xml_bind_jakarta_xml_bind_api_4_0_0.xml	(revision )
++++ .idea/libraries/Maven__jakarta_xml_bind_jakarta_xml_bind_api_4_0_0.xml	(revision )
+@@ -0,0 +1,13 @@
++<component name="libraryTable">
++  <library name="Maven: jakarta.xml.bind:jakarta.xml.bind-api:4.0.0">
++    <CLASSES>
++      <root url="jar://$MAVEN_REPOSITORY$/jakarta/xml/bind/jakarta.xml.bind-api/4.0.0/jakarta.xml.bind-api-4.0.0.jar!/" />
++    </CLASSES>
++    <JAVADOC>
++      <root url="jar://$MAVEN_REPOSITORY$/jakarta/xml/bind/jakarta.xml.bind-api/4.0.0/jakarta.xml.bind-api-4.0.0-javadoc.jar!/" />
++    </JAVADOC>
++    <SOURCES>
++      <root url="jar://$MAVEN_REPOSITORY$/jakarta/xml/bind/jakarta.xml.bind-api/4.0.0/jakarta.xml.bind-api-4.0.0-sources.jar!/" />
++    </SOURCES>
++  </library>
++</component>
+\ No newline at end of file
+Index: .idea/libraries/Maven__org_springframework_boot_spring_boot_starter_aop_3_2_2.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/libraries/Maven__org_springframework_boot_spring_boot_starter_aop_3_2_2.xml	(revision )
++++ .idea/libraries/Maven__org_springframework_boot_spring_boot_starter_aop_3_2_2.xml	(revision )
+@@ -0,0 +1,13 @@
++<component name="libraryTable">
++  <library name="Maven: org.springframework.boot:spring-boot-starter-aop:3.2.2">
++    <CLASSES>
++      <root url="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-starter-aop/3.2.2/spring-boot-starter-aop-3.2.2.jar!/" />
++    </CLASSES>
++    <JAVADOC>
++      <root url="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-starter-aop/3.2.2/spring-boot-starter-aop-3.2.2-javadoc.jar!/" />
++    </JAVADOC>
++    <SOURCES>
++      <root url="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-starter-aop/3.2.2/spring-boot-starter-aop-3.2.2-sources.jar!/" />
++    </SOURCES>
++  </library>
++</component>
+\ No newline at end of file
+Index: .idea/libraries/Hibernate_5_4_11_5_4_11.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/libraries/Hibernate_5_4_11_5_4_11.xml	(revision )
++++ .idea/libraries/Hibernate_5_4_11_5_4_11.xml	(revision )
+@@ -0,0 +1,27 @@
++<component name="libraryTable">
++  <library name="Hibernate 5.4.11-5.4.11" type="hibernate">
++    <properties version="5.4.11" />
++    <CLASSES>
++      <root url="jar://$PROJECT_DIR$/lib/antlr-2.7.7.jar!/" />
++      <root url="jar://$PROJECT_DIR$/lib/istack-commons-runtime-3.0.7.jar!/" />
++      <root url="jar://$PROJECT_DIR$/lib/classmate-1.5.1.jar!/" />
++      <root url="jar://$PROJECT_DIR$/lib/hibernate-commons-annotations-5.1.0.Final.jar!/" />
++      <root url="jar://$PROJECT_DIR$/lib/FastInfoset-1.2.15.jar!/" />
++      <root url="jar://$PROJECT_DIR$/lib/jandex-2.1.1.Final.jar!/" />
++      <root url="jar://$PROJECT_DIR$/lib/dom4j-2.1.1.jar!/" />
++      <root url="jar://$PROJECT_DIR$/lib/javax.activation-api-1.2.0.jar!/" />
++      <root url="jar://$PROJECT_DIR$/lib/javassist-3.24.0-GA.jar!/" />
++      <root url="jar://$PROJECT_DIR$/lib/jaxb-api-2.3.1.jar!/" />
++      <root url="jar://$PROJECT_DIR$/lib/jboss-logging-3.3.2.Final.jar!/" />
++      <root url="jar://$PROJECT_DIR$/lib/jaxb-runtime-2.3.1.jar!/" />
++      <root url="jar://$PROJECT_DIR$/lib/javax.persistence-api-2.2.jar!/" />
++      <root url="jar://$PROJECT_DIR$/lib/jboss-transaction-api_1.2_spec-1.1.1.Final.jar!/" />
++      <root url="jar://$PROJECT_DIR$/lib/txw2-2.3.1.jar!/" />
++      <root url="jar://$PROJECT_DIR$/lib/stax-ex-1.8.jar!/" />
++      <root url="jar://$PROJECT_DIR$/lib/byte-buddy-1.10.7.jar!/" />
++      <root url="jar://$PROJECT_DIR$/lib/hibernate-core-5.4.11.Final.jar!/" />
++    </CLASSES>
++    <JAVADOC />
++    <SOURCES />
++  </library>
++</component>
+\ No newline at end of file
+Index: .idea/libraries/Maven__com_zaxxer_HikariCP_5_0_1.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/libraries/Maven__com_zaxxer_HikariCP_5_0_1.xml	(revision )
++++ .idea/libraries/Maven__com_zaxxer_HikariCP_5_0_1.xml	(revision )
+@@ -0,0 +1,13 @@
++<component name="libraryTable">
++  <library name="Maven: com.zaxxer:HikariCP:5.0.1">
++    <CLASSES>
++      <root url="jar://$MAVEN_REPOSITORY$/com/zaxxer/HikariCP/5.0.1/HikariCP-5.0.1.jar!/" />
++    </CLASSES>
++    <JAVADOC>
++      <root url="jar://$MAVEN_REPOSITORY$/com/zaxxer/HikariCP/5.0.1/HikariCP-5.0.1-javadoc.jar!/" />
++    </JAVADOC>
++    <SOURCES>
++      <root url="jar://$MAVEN_REPOSITORY$/com/zaxxer/HikariCP/5.0.1/HikariCP-5.0.1-sources.jar!/" />
++    </SOURCES>
++  </library>
++</component>
+\ No newline at end of file
+Index: .idea/libraries/Spring_Data_JPA_2_2_4_RELEASE.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/libraries/Spring_Data_JPA_2_2_4_RELEASE.xml	(revision )
++++ .idea/libraries/Spring_Data_JPA_2_2_4_RELEASE.xml	(revision )
+@@ -0,0 +1,11 @@
++<component name="libraryTable">
++  <library name="Spring Data JPA-2.2.4.RELEASE" type="spring-data-jpa">
++    <properties version="2.2.4.RELEASE" />
++    <CLASSES>
++      <root url="jar://$PROJECT_DIR$/lib/spring-data-jpa/2.2.4.RELEASE/spring-data-jpa-2.2.4.RELEASE.jar!/" />
++      <root url="jar://$PROJECT_DIR$/lib/spring-data-commons/2.2.4.RELEASE/spring-data-commons-2.2.4.RELEASE.jar!/" />
++    </CLASSES>
++    <JAVADOC />
++    <SOURCES />
++  </library>
++</component>
+\ No newline at end of file
+Index: src/main/java/com/example/myapp/model/Owner.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>windows-1251
+===================================================================
+--- src/main/java/com/example/myapp/model/Owner.java	(revision )
++++ src/main/java/com/example/myapp/model/Owner.java	(revision )
+@@ -0,0 +1,52 @@
++package com.example.myapp.model;
++
++import javax.persistence.*;
++
++/**
++ * Created by Gudilin on 26.02.2024.
++ */
++@Entity
++@Table(name = "owners")
++public class Owner {
++
++    @Id
++    @GeneratedValue(strategy = GenerationType.IDENTITY)
++    @Column(name = "owner_id")
++    private Long id;
++
++    @Column(name = "name")
++    private String name;
++
++
++    @Column(name = "email")
++    private String email;
++
++
++    @Column(name = "phone")
++    private String phone;
++
++    public Long getId() {
++        return id;
++    }
++
++
++    // Добавлены сеттеры
++    public void setId(Long id) {
++        this.id = id;
++    }
++
++
++    public void setName(String name) {
++        this.name = name;
++    }
++
++
++    public void setEmail(String email) {
++        this.email = email;
++    }
++
++
++    public void setPhone(String phone) {
++        this.phone = phone;
++    }
++}
+Index: ../helloWorld/src/CheckLabels/InterTextAnalyzer.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>windows-1251
+===================================================================
+--- ../helloWorld/src/CheckLabels/InterTextAnalyzer.java	(revision )
++++ ../helloWorld/src/CheckLabels/InterTextAnalyzer.java	(revision )
+@@ -0,0 +1,8 @@
++package CheckLabels;
++
++/**
++ * Created by Gudilin on 19.03.2021.
++ */
++public interface InterTextAnalyzer {
++    TestAnalyze.Label processText(String text);
++}
+Index: .idea/libraries/Maven__org_springframework_spring_context_6_1_4.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/libraries/Maven__org_springframework_spring_context_6_1_4.xml	(revision )
++++ .idea/libraries/Maven__org_springframework_spring_context_6_1_4.xml	(revision )
+@@ -0,0 +1,13 @@
++<component name="libraryTable">
++  <library name="Maven: org.springframework:spring-context:6.1.4">
++    <CLASSES>
++      <root url="jar://$MAVEN_REPOSITORY$/org/springframework/spring-context/6.1.4/spring-context-6.1.4.jar!/" />
++    </CLASSES>
++    <JAVADOC>
++      <root url="jar://$MAVEN_REPOSITORY$/org/springframework/spring-context/6.1.4/spring-context-6.1.4-javadoc.jar!/" />
++    </JAVADOC>
++    <SOURCES>
++      <root url="jar://$MAVEN_REPOSITORY$/org/springframework/spring-context/6.1.4/spring-context-6.1.4-sources.jar!/" />
++    </SOURCES>
++  </library>
++</component>
+\ No newline at end of file
+Index: .idea/libraries/Spring_Integration_5_2_3_RELEASE.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/libraries/Spring_Integration_5_2_3_RELEASE.xml	(revision )
++++ .idea/libraries/Spring_Integration_5_2_3_RELEASE.xml	(revision )
+@@ -0,0 +1,38 @@
++<component name="libraryTable">
++  <library name="Spring Integration-5.2.3.RELEASE" type="spring-integration">
++    <properties version="5.2.3.RELEASE" />
++    <CLASSES>
++      <root url="jar://$PROJECT_DIR$/lib/spring-integration-feed/5.2.3.RELEASE/spring-integration-feed-5.2.3.RELEASE.jar!/" />
++      <root url="jar://$PROJECT_DIR$/lib/spring-integration-event/5.2.3.RELEASE/spring-integration-event-5.2.3.RELEASE.jar!/" />
++      <root url="jar://$PROJECT_DIR$/lib/spring-integration-gemfire/5.2.3.RELEASE/spring-integration-gemfire-5.2.3.RELEASE.jar!/" />
++      <root url="jar://$PROJECT_DIR$/lib/spring-integration-ftp/5.2.3.RELEASE/spring-integration-ftp-5.2.3.RELEASE.jar!/" />
++      <root url="jar://$PROJECT_DIR$/lib/spring-integration-http/5.2.3.RELEASE/spring-integration-http-5.2.3.RELEASE.jar!/" />
++      <root url="jar://$PROJECT_DIR$/lib/spring-integration-groovy/5.2.3.RELEASE/spring-integration-groovy-5.2.3.RELEASE.jar!/" />
++      <root url="jar://$PROJECT_DIR$/lib/spring-integration-jdbc/5.2.3.RELEASE/spring-integration-jdbc-5.2.3.RELEASE.jar!/" />
++      <root url="jar://$PROJECT_DIR$/lib/spring-integration-amqp/5.2.3.RELEASE/spring-integration-amqp-5.2.3.RELEASE.jar!/" />
++      <root url="jar://$PROJECT_DIR$/lib/spring-integration-file/5.2.3.RELEASE/spring-integration-file-5.2.3.RELEASE.jar!/" />
++      <root url="jar://$PROJECT_DIR$/lib/spring-integration-jmx/5.2.3.RELEASE/spring-integration-jmx-5.2.3.RELEASE.jar!/" />
++      <root url="jar://$PROJECT_DIR$/lib/spring-integration-ip/5.2.3.RELEASE/spring-integration-ip-5.2.3.RELEASE.jar!/" />
++      <root url="jar://$PROJECT_DIR$/lib/spring-integration-jpa/5.2.3.RELEASE/spring-integration-jpa-5.2.3.RELEASE.jar!/" />
++      <root url="jar://$PROJECT_DIR$/lib/spring-integration-mail/5.2.3.RELEASE/spring-integration-mail-5.2.3.RELEASE.jar!/" />
++      <root url="jar://$PROJECT_DIR$/lib/spring-integration-mongodb/5.2.3.RELEASE/spring-integration-mongodb-5.2.3.RELEASE.jar!/" />
++      <root url="jar://$PROJECT_DIR$/lib/spring-integration-mqtt/5.2.3.RELEASE/spring-integration-mqtt-5.2.3.RELEASE.jar!/" />
++      <root url="jar://$PROJECT_DIR$/lib/spring-integration-rmi/5.2.3.RELEASE/spring-integration-rmi-5.2.3.RELEASE.jar!/" />
++      <root url="jar://$PROJECT_DIR$/lib/spring-integration-scripting/5.2.3.RELEASE/spring-integration-scripting-5.2.3.RELEASE.jar!/" />
++      <root url="jar://$PROJECT_DIR$/lib/spring-integration-security/5.2.3.RELEASE/spring-integration-security-5.2.3.RELEASE.jar!/" />
++      <root url="jar://$PROJECT_DIR$/lib/spring-integration-jms/5.2.3.RELEASE/spring-integration-jms-5.2.3.RELEASE.jar!/" />
++      <root url="jar://$PROJECT_DIR$/lib/spring-integration-stream/5.2.3.RELEASE/spring-integration-stream-5.2.3.RELEASE.jar!/" />
++      <root url="jar://$PROJECT_DIR$/lib/spring-integration-sftp/5.2.3.RELEASE/spring-integration-sftp-5.2.3.RELEASE.jar!/" />
++      <root url="jar://$PROJECT_DIR$/lib/spring-integration-syslog/5.2.3.RELEASE/spring-integration-syslog-5.2.3.RELEASE.jar!/" />
++      <root url="jar://$PROJECT_DIR$/lib/spring-integration-twitter/5.0.9.RELEASE/spring-integration-twitter-5.0.9.RELEASE.jar!/" />
++      <root url="jar://$PROJECT_DIR$/lib/spring-integration-test/5.2.3.RELEASE/spring-integration-test-5.2.3.RELEASE.jar!/" />
++      <root url="jar://$PROJECT_DIR$/lib/spring-integration-redis/5.2.3.RELEASE/spring-integration-redis-5.2.3.RELEASE.jar!/" />
++      <root url="jar://$PROJECT_DIR$/lib/spring-integration-xml/5.2.3.RELEASE/spring-integration-xml-5.2.3.RELEASE.jar!/" />
++      <root url="jar://$PROJECT_DIR$/lib/spring-integration-xmpp/5.2.3.RELEASE/spring-integration-xmpp-5.2.3.RELEASE.jar!/" />
++      <root url="jar://$PROJECT_DIR$/lib/spring-integration-ws/5.2.3.RELEASE/spring-integration-ws-5.2.3.RELEASE.jar!/" />
++      <root url="jar://$PROJECT_DIR$/lib/spring-integration-core/5.2.3.RELEASE/spring-integration-core-5.2.3.RELEASE.jar!/" />
++    </CLASSES>
++    <JAVADOC />
++    <SOURCES />
++  </library>
++</component>
+\ No newline at end of file
+Index: .idea/libraries/Maven__org_springframework_spring_expression_6_1_4.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/libraries/Maven__org_springframework_spring_expression_6_1_4.xml	(revision )
++++ .idea/libraries/Maven__org_springframework_spring_expression_6_1_4.xml	(revision )
+@@ -0,0 +1,13 @@
++<component name="libraryTable">
++  <library name="Maven: org.springframework:spring-expression:6.1.4">
++    <CLASSES>
++      <root url="jar://$MAVEN_REPOSITORY$/org/springframework/spring-expression/6.1.4/spring-expression-6.1.4.jar!/" />
++    </CLASSES>
++    <JAVADOC>
++      <root url="jar://$MAVEN_REPOSITORY$/org/springframework/spring-expression/6.1.4/spring-expression-6.1.4-javadoc.jar!/" />
++    </JAVADOC>
++    <SOURCES>
++      <root url="jar://$MAVEN_REPOSITORY$/org/springframework/spring-expression/6.1.4/spring-expression-6.1.4-sources.jar!/" />
++    </SOURCES>
++  </library>
++</component>
+\ No newline at end of file
+Index: .idea/libraries/Maven__com_fasterxml_jackson_datatype_jackson_datatype_jsr310_2_15_3.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/libraries/Maven__com_fasterxml_jackson_datatype_jackson_datatype_jsr310_2_15_3.xml	(revision )
++++ .idea/libraries/Maven__com_fasterxml_jackson_datatype_jackson_datatype_jsr310_2_15_3.xml	(revision )
+@@ -0,0 +1,13 @@
++<component name="libraryTable">
++  <library name="Maven: com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.15.3">
++    <CLASSES>
++      <root url="jar://$MAVEN_REPOSITORY$/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.15.3/jackson-datatype-jsr310-2.15.3.jar!/" />
++    </CLASSES>
++    <JAVADOC>
++      <root url="jar://$MAVEN_REPOSITORY$/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.15.3/jackson-datatype-jsr310-2.15.3-javadoc.jar!/" />
++    </JAVADOC>
++    <SOURCES>
++      <root url="jar://$MAVEN_REPOSITORY$/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.15.3/jackson-datatype-jsr310-2.15.3-sources.jar!/" />
++    </SOURCES>
++  </library>
++</component>
+\ No newline at end of file
+Index: .idea/libraries/Spring_Web_Services_2_0_2.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/libraries/Spring_Web_Services_2_0_2.xml	(revision )
++++ .idea/libraries/Spring_Web_Services_2_0_2.xml	(revision )
+@@ -0,0 +1,10 @@
++<component name="libraryTable">
++  <library name="Spring Web Services-2.0.2" type="spring-ws">
++    <properties version="2.0.2" />
++    <CLASSES>
++      <root url="jar://$PROJECT_DIR$/lib/spring-ws.jar!/" />
++    </CLASSES>
++    <JAVADOC />
++    <SOURCES />
++  </library>
++</component>
+\ No newline at end of file
+Index: .idea/libraries/Maven__net_bytebuddy_byte_buddy_1_14_11.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/libraries/Maven__net_bytebuddy_byte_buddy_1_14_11.xml	(revision )
++++ .idea/libraries/Maven__net_bytebuddy_byte_buddy_1_14_11.xml	(revision )
+@@ -0,0 +1,13 @@
++<component name="libraryTable">
++  <library name="Maven: net.bytebuddy:byte-buddy:1.14.11">
++    <CLASSES>
++      <root url="jar://$MAVEN_REPOSITORY$/net/bytebuddy/byte-buddy/1.14.11/byte-buddy-1.14.11.jar!/" />
++    </CLASSES>
++    <JAVADOC>
++      <root url="jar://$MAVEN_REPOSITORY$/net/bytebuddy/byte-buddy/1.14.11/byte-buddy-1.14.11-javadoc.jar!/" />
++    </JAVADOC>
++    <SOURCES>
++      <root url="jar://$MAVEN_REPOSITORY$/net/bytebuddy/byte-buddy/1.14.11/byte-buddy-1.14.11-sources.jar!/" />
++    </SOURCES>
++  </library>
++</component>
+\ No newline at end of file
+Index: .idea/libraries/Maven__org_springframework_spring_aop_6_1_4.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/libraries/Maven__org_springframework_spring_aop_6_1_4.xml	(revision )
++++ .idea/libraries/Maven__org_springframework_spring_aop_6_1_4.xml	(revision )
+@@ -0,0 +1,13 @@
++<component name="libraryTable">
++  <library name="Maven: org.springframework:spring-aop:6.1.4">
++    <CLASSES>
++      <root url="jar://$MAVEN_REPOSITORY$/org/springframework/spring-aop/6.1.4/spring-aop-6.1.4.jar!/" />
++    </CLASSES>
++    <JAVADOC>
++      <root url="jar://$MAVEN_REPOSITORY$/org/springframework/spring-aop/6.1.4/spring-aop-6.1.4-javadoc.jar!/" />
++    </JAVADOC>
++    <SOURCES>
++      <root url="jar://$MAVEN_REPOSITORY$/org/springframework/spring-aop/6.1.4/spring-aop-6.1.4-sources.jar!/" />
++    </SOURCES>
++  </library>
++</component>
+\ No newline at end of file
+Index: .idea/libraries/Maven__org_springframework_spring_core_6_1_4.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/libraries/Maven__org_springframework_spring_core_6_1_4.xml	(revision )
++++ .idea/libraries/Maven__org_springframework_spring_core_6_1_4.xml	(revision )
+@@ -0,0 +1,13 @@
++<component name="libraryTable">
++  <library name="Maven: org.springframework:spring-core:6.1.4">
++    <CLASSES>
++      <root url="jar://$MAVEN_REPOSITORY$/org/springframework/spring-core/6.1.4/spring-core-6.1.4.jar!/" />
++    </CLASSES>
++    <JAVADOC>
++      <root url="jar://$MAVEN_REPOSITORY$/org/springframework/spring-core/6.1.4/spring-core-6.1.4-javadoc.jar!/" />
++    </JAVADOC>
++    <SOURCES>
++      <root url="jar://$MAVEN_REPOSITORY$/org/springframework/spring-core/6.1.4/spring-core-6.1.4-sources.jar!/" />
++    </SOURCES>
++  </library>
++</component>
+\ No newline at end of file
+Index: .idea/libraries/Spring_5_2_3_RELEASE.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/libraries/Spring_5_2_3_RELEASE.xml	(revision )
++++ .idea/libraries/Spring_5_2_3_RELEASE.xml	(revision )
+@@ -0,0 +1,26 @@
++<component name="libraryTable">
++  <library name="Spring-5.2.3.RELEASE" type="spring">
++    <properties version="5.2.3.RELEASE" />
++    <CLASSES>
++      <root url="jar://$PROJECT_DIR$/lib/spring-instrument-5.2.3.RELEASE.jar!/" />
++      <root url="jar://$PROJECT_DIR$/lib/spring-aspects-5.2.3.RELEASE.jar!/" />
++      <root url="jar://$PROJECT_DIR$/lib/spring-aop-5.2.3.RELEASE.jar!/" />
++      <root url="jar://$PROJECT_DIR$/lib/spring-context-support-5.2.3.RELEASE.jar!/" />
++      <root url="jar://$PROJECT_DIR$/lib/spring-jms-5.2.3.RELEASE.jar!/" />
++      <root url="jar://$PROJECT_DIR$/lib/spring-orm-5.2.3.RELEASE.jar!/" />
++      <root url="jar://$PROJECT_DIR$/lib/spring-expression-5.2.3.RELEASE.jar!/" />
++      <root url="jar://$PROJECT_DIR$/lib/spring-oxm-5.2.3.RELEASE.jar!/" />
++      <root url="jar://$PROJECT_DIR$/lib/commons-logging-1.2.jar!/" />
++      <root url="jar://$PROJECT_DIR$/lib/aopalliance-1.0.jar!/" />
++      <root url="jar://$PROJECT_DIR$/lib/spring-messaging-5.2.3.RELEASE.jar!/" />
++      <root url="jar://$PROJECT_DIR$/lib/spring-tx-5.2.3.RELEASE.jar!/" />
++      <root url="jar://$PROJECT_DIR$/lib/spring-jdbc-5.2.3.RELEASE.jar!/" />
++      <root url="jar://$PROJECT_DIR$/lib/spring-beans-5.2.3.RELEASE.jar!/" />
++      <root url="jar://$PROJECT_DIR$/lib/spring-test-5.2.3.RELEASE.jar!/" />
++      <root url="jar://$PROJECT_DIR$/lib/spring-context-5.2.3.RELEASE.jar!/" />
++      <root url="jar://$PROJECT_DIR$/lib/spring-core-5.2.3.RELEASE.jar!/" />
++    </CLASSES>
++    <JAVADOC />
++    <SOURCES />
++  </library>
++</component>
+\ No newline at end of file
+Index: .idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_15_3.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_15_3.xml	(revision )
++++ .idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_15_3.xml	(revision )
+@@ -0,0 +1,13 @@
++<component name="libraryTable">
++  <library name="Maven: com.fasterxml.jackson.core:jackson-annotations:2.15.3">
++    <CLASSES>
++      <root url="jar://$MAVEN_REPOSITORY$/com/fasterxml/jackson/core/jackson-annotations/2.15.3/jackson-annotations-2.15.3.jar!/" />
++    </CLASSES>
++    <JAVADOC>
++      <root url="jar://$MAVEN_REPOSITORY$/com/fasterxml/jackson/core/jackson-annotations/2.15.3/jackson-annotations-2.15.3-javadoc.jar!/" />
++    </JAVADOC>
++    <SOURCES>
++      <root url="jar://$MAVEN_REPOSITORY$/com/fasterxml/jackson/core/jackson-annotations/2.15.3/jackson-annotations-2.15.3-sources.jar!/" />
++    </SOURCES>
++  </library>
++</component>
+\ No newline at end of file
+Index: .idea/libraries/Maven__org_slf4j_jul_to_slf4j_2_0_11.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/libraries/Maven__org_slf4j_jul_to_slf4j_2_0_11.xml	(revision )
++++ .idea/libraries/Maven__org_slf4j_jul_to_slf4j_2_0_11.xml	(revision )
+@@ -0,0 +1,13 @@
++<component name="libraryTable">
++  <library name="Maven: org.slf4j:jul-to-slf4j:2.0.11">
++    <CLASSES>
++      <root url="jar://$MAVEN_REPOSITORY$/org/slf4j/jul-to-slf4j/2.0.11/jul-to-slf4j-2.0.11.jar!/" />
++    </CLASSES>
++    <JAVADOC>
++      <root url="jar://$MAVEN_REPOSITORY$/org/slf4j/jul-to-slf4j/2.0.11/jul-to-slf4j-2.0.11-javadoc.jar!/" />
++    </JAVADOC>
++    <SOURCES>
++      <root url="jar://$MAVEN_REPOSITORY$/org/slf4j/jul-to-slf4j/2.0.11/jul-to-slf4j-2.0.11-sources.jar!/" />
++    </SOURCES>
++  </library>
++</component>
+\ No newline at end of file
+Index: .idea/libraries/Maven__io_smallrye_jandex_3_1_2.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/libraries/Maven__io_smallrye_jandex_3_1_2.xml	(revision )
++++ .idea/libraries/Maven__io_smallrye_jandex_3_1_2.xml	(revision )
+@@ -0,0 +1,13 @@
++<component name="libraryTable">
++  <library name="Maven: io.smallrye:jandex:3.1.2">
++    <CLASSES>
++      <root url="jar://$MAVEN_REPOSITORY$/io/smallrye/jandex/3.1.2/jandex-3.1.2.jar!/" />
++    </CLASSES>
++    <JAVADOC>
++      <root url="jar://$MAVEN_REPOSITORY$/io/smallrye/jandex/3.1.2/jandex-3.1.2-javadoc.jar!/" />
++    </JAVADOC>
++    <SOURCES>
++      <root url="jar://$MAVEN_REPOSITORY$/io/smallrye/jandex/3.1.2/jandex-3.1.2-sources.jar!/" />
++    </SOURCES>
++  </library>
++</component>
+\ No newline at end of file
+Index: ../../.IntelliJIdea14/config/options/editor.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- ../../.IntelliJIdea14/config/options/editor.xml	(revision )
++++ ../../.IntelliJIdea14/config/options/editor.xml	(revision )
+@@ -0,0 +1,5 @@
++<application>
++  <component name="EditorSettings">
++    <option name="USE_SOFT_WRAPS" value="CONSOLE" />
++  </component>
++</application>
+\ No newline at end of file
+Index: .idea/libraries/Maven__org_springframework_spring_tx_6_1_3.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/libraries/Maven__org_springframework_spring_tx_6_1_3.xml	(revision )
++++ .idea/libraries/Maven__org_springframework_spring_tx_6_1_3.xml	(revision )
+@@ -0,0 +1,13 @@
++<component name="libraryTable">
++  <library name="Maven: org.springframework:spring-tx:6.1.3">
++    <CLASSES>
++      <root url="jar://$MAVEN_REPOSITORY$/org/springframework/spring-tx/6.1.3/spring-tx-6.1.3.jar!/" />
++    </CLASSES>
++    <JAVADOC>
++      <root url="jar://$MAVEN_REPOSITORY$/org/springframework/spring-tx/6.1.3/spring-tx-6.1.3-javadoc.jar!/" />
++    </JAVADOC>
++    <SOURCES>
++      <root url="jar://$MAVEN_REPOSITORY$/org/springframework/spring-tx/6.1.3/spring-tx-6.1.3-sources.jar!/" />
++    </SOURCES>
++  </library>
++</component>
+\ No newline at end of file
+Index: ../helloWorld/src/helloworld/shape/Shape.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>windows-1251
+===================================================================
+--- ../helloWorld/src/helloworld/shape/Shape.java	(revision )
++++ ../helloWorld/src/helloworld/shape/Shape.java	(revision )
+@@ -0,0 +1,11 @@
++package helloworld.shape;
++
++/**
++ * Created by Gudilin on 19.03.2021.
++ */
++public abstract class Shape {
++    private final Color color;
++    public Shape(Color color ) {this.color = color;}
++    public Color getColor(){return color;}
++    public abstract double getArea();
++}
+Index: ../helloWorld/.idea/uiDesigner.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- ../helloWorld/.idea/uiDesigner.xml	(revision )
++++ ../helloWorld/.idea/uiDesigner.xml	(revision )
+@@ -0,0 +1,124 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="Palette2">
++    <group name="Swing">
++      <item class="com.intellij.uiDesigner.HSpacer" tooltip-text="Horizontal Spacer" icon="/com/intellij/uiDesigner/icons/hspacer.png" removable="false" auto-create-binding="false" can-attach-label="false">
++        <default-constraints vsize-policy="1" hsize-policy="6" anchor="0" fill="1" />
++      </item>
++      <item class="com.intellij.uiDesigner.VSpacer" tooltip-text="Vertical Spacer" icon="/com/intellij/uiDesigner/icons/vspacer.png" removable="false" auto-create-binding="false" can-attach-label="false">
++        <default-constraints vsize-policy="6" hsize-policy="1" anchor="0" fill="2" />
++      </item>
++      <item class="javax.swing.JPanel" icon="/com/intellij/uiDesigner/icons/panel.png" removable="false" auto-create-binding="false" can-attach-label="false">
++        <default-constraints vsize-policy="3" hsize-policy="3" anchor="0" fill="3" />
++      </item>
++      <item class="javax.swing.JScrollPane" icon="/com/intellij/uiDesigner/icons/scrollPane.png" removable="false" auto-create-binding="false" can-attach-label="true">
++        <default-constraints vsize-policy="7" hsize-policy="7" anchor="0" fill="3" />
++      </item>
++      <item class="javax.swing.JButton" icon="/com/intellij/uiDesigner/icons/button.png" removable="false" auto-create-binding="true" can-attach-label="false">
++        <default-constraints vsize-policy="0" hsize-policy="3" anchor="0" fill="1" />
++        <initial-values>
++          <property name="text" value="Button" />
++        </initial-values>
++      </item>
++      <item class="javax.swing.JRadioButton" icon="/com/intellij/uiDesigner/icons/radioButton.png" removable="false" auto-create-binding="true" can-attach-label="false">
++        <default-constraints vsize-policy="0" hsize-policy="3" anchor="8" fill="0" />
++        <initial-values>
++          <property name="text" value="RadioButton" />
++        </initial-values>
++      </item>
++      <item class="javax.swing.JCheckBox" icon="/com/intellij/uiDesigner/icons/checkBox.png" removable="false" auto-create-binding="true" can-attach-label="false">
++        <default-constraints vsize-policy="0" hsize-policy="3" anchor="8" fill="0" />
++        <initial-values>
++          <property name="text" value="CheckBox" />
++        </initial-values>
++      </item>
++      <item class="javax.swing.JLabel" icon="/com/intellij/uiDesigner/icons/label.png" removable="false" auto-create-binding="false" can-attach-label="false">
++        <default-constraints vsize-policy="0" hsize-policy="0" anchor="8" fill="0" />
++        <initial-values>
++          <property name="text" value="Label" />
++        </initial-values>
++      </item>
++      <item class="javax.swing.JTextField" icon="/com/intellij/uiDesigner/icons/textField.png" removable="false" auto-create-binding="true" can-attach-label="true">
++        <default-constraints vsize-policy="0" hsize-policy="6" anchor="8" fill="1">
++          <preferred-size width="150" height="-1" />
++        </default-constraints>
++      </item>
++      <item class="javax.swing.JPasswordField" icon="/com/intellij/uiDesigner/icons/passwordField.png" removable="false" auto-create-binding="true" can-attach-label="true">
++        <default-constraints vsize-policy="0" hsize-policy="6" anchor="8" fill="1">
++          <preferred-size width="150" height="-1" />
++        </default-constraints>
++      </item>
++      <item class="javax.swing.JFormattedTextField" icon="/com/intellij/uiDesigner/icons/formattedTextField.png" removable="false" auto-create-binding="true" can-attach-label="true">
++        <default-constraints vsize-policy="0" hsize-policy="6" anchor="8" fill="1">
++          <preferred-size width="150" height="-1" />
++        </default-constraints>
++      </item>
++      <item class="javax.swing.JTextArea" icon="/com/intellij/uiDesigner/icons/textArea.png" removable="false" auto-create-binding="true" can-attach-label="true">
++        <default-constraints vsize-policy="6" hsize-policy="6" anchor="0" fill="3">
++          <preferred-size width="150" height="50" />
++        </default-constraints>
++      </item>
++      <item class="javax.swing.JTextPane" icon="/com/intellij/uiDesigner/icons/textPane.png" removable="false" auto-create-binding="true" can-attach-label="true">
++        <default-constraints vsize-policy="6" hsize-policy="6" anchor="0" fill="3">
++          <preferred-size width="150" height="50" />
++        </default-constraints>
++      </item>
++      <item class="javax.swing.JEditorPane" icon="/com/intellij/uiDesigner/icons/editorPane.png" removable="false" auto-create-binding="true" can-attach-label="true">
++        <default-constraints vsize-policy="6" hsize-policy="6" anchor="0" fill="3">
++          <preferred-size width="150" height="50" />
++        </default-constraints>
++      </item>
++      <item class="javax.swing.JComboBox" icon="/com/intellij/uiDesigner/icons/comboBox.png" removable="false" auto-create-binding="true" can-attach-label="true">
++        <default-constraints vsize-policy="0" hsize-policy="2" anchor="8" fill="1" />
++      </item>
++      <item class="javax.swing.JTable" icon="/com/intellij/uiDesigner/icons/table.png" removable="false" auto-create-binding="true" can-attach-label="false">
++        <default-constraints vsize-policy="6" hsize-policy="6" anchor="0" fill="3">
++          <preferred-size width="150" height="50" />
++        </default-constraints>
++      </item>
++      <item class="javax.swing.JList" icon="/com/intellij/uiDesigner/icons/list.png" removable="false" auto-create-binding="true" can-attach-label="false">
++        <default-constraints vsize-policy="6" hsize-policy="2" anchor="0" fill="3">
++          <preferred-size width="150" height="50" />
++        </default-constraints>
++      </item>
++      <item class="javax.swing.JTree" icon="/com/intellij/uiDesigner/icons/tree.png" removable="false" auto-create-binding="true" can-attach-label="false">
++        <default-constraints vsize-policy="6" hsize-policy="6" anchor="0" fill="3">
++          <preferred-size width="150" height="50" />
++        </default-constraints>
++      </item>
++      <item class="javax.swing.JTabbedPane" icon="/com/intellij/uiDesigner/icons/tabbedPane.png" removable="false" auto-create-binding="true" can-attach-label="false">
++        <default-constraints vsize-policy="3" hsize-policy="3" anchor="0" fill="3">
++          <preferred-size width="200" height="200" />
++        </default-constraints>
++      </item>
++      <item class="javax.swing.JSplitPane" icon="/com/intellij/uiDesigner/icons/splitPane.png" removable="false" auto-create-binding="false" can-attach-label="false">
++        <default-constraints vsize-policy="3" hsize-policy="3" anchor="0" fill="3">
++          <preferred-size width="200" height="200" />
++        </default-constraints>
++      </item>
++      <item class="javax.swing.JSpinner" icon="/com/intellij/uiDesigner/icons/spinner.png" removable="false" auto-create-binding="true" can-attach-label="true">
++        <default-constraints vsize-policy="0" hsize-policy="6" anchor="8" fill="1" />
++      </item>
++      <item class="javax.swing.JSlider" icon="/com/intellij/uiDesigner/icons/slider.png" removable="false" auto-create-binding="true" can-attach-label="false">
++        <default-constraints vsize-policy="0" hsize-policy="6" anchor="8" fill="1" />
++      </item>
++      <item class="javax.swing.JSeparator" icon="/com/intellij/uiDesigner/icons/separator.png" removable="false" auto-create-binding="false" can-attach-label="false">
++        <default-constraints vsize-policy="6" hsize-policy="6" anchor="0" fill="3" />
++      </item>
++      <item class="javax.swing.JProgressBar" icon="/com/intellij/uiDesigner/icons/progressbar.png" removable="false" auto-create-binding="true" can-attach-label="false">
++        <default-constraints vsize-policy="0" hsize-policy="6" anchor="0" fill="1" />
++      </item>
++      <item class="javax.swing.JToolBar" icon="/com/intellij/uiDesigner/icons/toolbar.png" removable="false" auto-create-binding="false" can-attach-label="false">
++        <default-constraints vsize-policy="0" hsize-policy="6" anchor="0" fill="1">
++          <preferred-size width="-1" height="20" />
++        </default-constraints>
++      </item>
++      <item class="javax.swing.JToolBar$Separator" icon="/com/intellij/uiDesigner/icons/toolbarSeparator.png" removable="false" auto-create-binding="false" can-attach-label="false">
++        <default-constraints vsize-policy="0" hsize-policy="0" anchor="0" fill="1" />
++      </item>
++      <item class="javax.swing.JScrollBar" icon="/com/intellij/uiDesigner/icons/scrollbar.png" removable="false" auto-create-binding="true" can-attach-label="false">
++        <default-constraints vsize-policy="6" hsize-policy="0" anchor="0" fill="2" />
++      </item>
++    </group>
++  </component>
++</project>
+\ No newline at end of file
+Index: .idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_websocket_10_1_18.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_websocket_10_1_18.xml	(revision )
++++ .idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_websocket_10_1_18.xml	(revision )
+@@ -0,0 +1,13 @@
++<component name="libraryTable">
++  <library name="Maven: org.apache.tomcat.embed:tomcat-embed-websocket:10.1.18">
++    <CLASSES>
++      <root url="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-websocket/10.1.18/tomcat-embed-websocket-10.1.18.jar!/" />
++    </CLASSES>
++    <JAVADOC>
++      <root url="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-websocket/10.1.18/tomcat-embed-websocket-10.1.18-javadoc.jar!/" />
++    </JAVADOC>
++    <SOURCES>
++      <root url="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-websocket/10.1.18/tomcat-embed-websocket-10.1.18-sources.jar!/" />
++    </SOURCES>
++  </library>
++</component>
+\ No newline at end of file
+Index: .idea/libraries/Maven__org_springframework_spring_aspects_6_1_3.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/libraries/Maven__org_springframework_spring_aspects_6_1_3.xml	(revision )
++++ .idea/libraries/Maven__org_springframework_spring_aspects_6_1_3.xml	(revision )
+@@ -0,0 +1,13 @@
++<component name="libraryTable">
++  <library name="Maven: org.springframework:spring-aspects:6.1.3">
++    <CLASSES>
++      <root url="jar://$MAVEN_REPOSITORY$/org/springframework/spring-aspects/6.1.3/spring-aspects-6.1.3.jar!/" />
++    </CLASSES>
++    <JAVADOC>
++      <root url="jar://$MAVEN_REPOSITORY$/org/springframework/spring-aspects/6.1.3/spring-aspects-6.1.3-javadoc.jar!/" />
++    </JAVADOC>
++    <SOURCES>
++      <root url="jar://$MAVEN_REPOSITORY$/org/springframework/spring-aspects/6.1.3/spring-aspects-6.1.3-sources.jar!/" />
++    </SOURCES>
++  </library>
++</component>
+\ No newline at end of file
+Index: ../helloWorld/src/helloworld/shape/Point.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>windows-1251
+===================================================================
+--- ../helloWorld/src/helloworld/shape/Point.java	(revision )
++++ ../helloWorld/src/helloworld/shape/Point.java	(revision )
+@@ -0,0 +1,32 @@
++package helloworld.shape;
++
++/**
++ * Created by Gudilin on 19.03.2021.
++ */
++public class Point {
++
++    private final double x;
++    private final double y;
++
++    public Point(double x, double y) {
++        this.x = x;
++        this.y = y;
++    }
++
++    public double getX() {
++        return x;
++    }
++
++    public double getY() {
++        return y;
++    }
++
++
++    @Override
++    public String toString() {
++        return "Point{" +
++                "x=" + x +
++                ", y=" + y +
++                '}';
++    }
++}
+Index: ../../.IntelliJIdea14/config/options/file.template.settings.xml
+===================================================================
+--- ../../.IntelliJIdea14/config/options/file.template.settings.xml	(revision f9e03d98f8ea46942efe46cec5dc3a2731ade295)
++++ ../../.IntelliJIdea14/config/options/file.template.settings.xml	(revision f9e03d98f8ea46942efe46cec5dc3a2731ade295)
+@@ -1,7 +0,0 @@
+-<application>
+-  <component name="ExportableFileTemplateSettings">
+-    <includes_templates>
+-      <template name="File Header.java" reformat="false" enabled="true" />
+-    </includes_templates>
+-  </component>
+-</application>
+\ No newline at end of file
+Index: .idea/libraries/Maven__org_hibernate_orm_hibernate_core_6_4_4_Final.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/libraries/Maven__org_hibernate_orm_hibernate_core_6_4_4_Final.xml	(revision )
++++ .idea/libraries/Maven__org_hibernate_orm_hibernate_core_6_4_4_Final.xml	(revision )
+@@ -0,0 +1,13 @@
++<component name="libraryTable">
++  <library name="Maven: org.hibernate.orm:hibernate-core:6.4.4.Final">
++    <CLASSES>
++      <root url="jar://$MAVEN_REPOSITORY$/org/hibernate/orm/hibernate-core/6.4.4.Final/hibernate-core-6.4.4.Final.jar!/" />
++    </CLASSES>
++    <JAVADOC>
++      <root url="jar://$MAVEN_REPOSITORY$/org/hibernate/orm/hibernate-core/6.4.4.Final/hibernate-core-6.4.4.Final-javadoc.jar!/" />
++    </JAVADOC>
++    <SOURCES>
++      <root url="jar://$MAVEN_REPOSITORY$/org/hibernate/orm/hibernate-core/6.4.4.Final/hibernate-core-6.4.4.Final-sources.jar!/" />
++    </SOURCES>
++  </library>
++</component>
+\ No newline at end of file
+Index: .idea/libraries/Maven__org_springframework_spring_beans_6_1_4.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/libraries/Maven__org_springframework_spring_beans_6_1_4.xml	(revision )
++++ .idea/libraries/Maven__org_springframework_spring_beans_6_1_4.xml	(revision )
+@@ -0,0 +1,13 @@
++<component name="libraryTable">
++  <library name="Maven: org.springframework:spring-beans:6.1.4">
++    <CLASSES>
++      <root url="jar://$MAVEN_REPOSITORY$/org/springframework/spring-beans/6.1.4/spring-beans-6.1.4.jar!/" />
++    </CLASSES>
++    <JAVADOC>
++      <root url="jar://$MAVEN_REPOSITORY$/org/springframework/spring-beans/6.1.4/spring-beans-6.1.4-javadoc.jar!/" />
++    </JAVADOC>
++    <SOURCES>
++      <root url="jar://$MAVEN_REPOSITORY$/org/springframework/spring-beans/6.1.4/spring-beans-6.1.4-sources.jar!/" />
++    </SOURCES>
++  </library>
++</component>
+\ No newline at end of file
+Index: .idea/libraries/Maven__org_antlr_antlr4_runtime_4_13_0.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/libraries/Maven__org_antlr_antlr4_runtime_4_13_0.xml	(revision )
++++ .idea/libraries/Maven__org_antlr_antlr4_runtime_4_13_0.xml	(revision )
+@@ -0,0 +1,13 @@
++<component name="libraryTable">
++  <library name="Maven: org.antlr:antlr4-runtime:4.13.0">
++    <CLASSES>
++      <root url="jar://$MAVEN_REPOSITORY$/org/antlr/antlr4-runtime/4.13.0/antlr4-runtime-4.13.0.jar!/" />
++    </CLASSES>
++    <JAVADOC>
++      <root url="jar://$MAVEN_REPOSITORY$/org/antlr/antlr4-runtime/4.13.0/antlr4-runtime-4.13.0-javadoc.jar!/" />
++    </JAVADOC>
++    <SOURCES>
++      <root url="jar://$MAVEN_REPOSITORY$/org/antlr/antlr4-runtime/4.13.0/antlr4-runtime-4.13.0-sources.jar!/" />
++    </SOURCES>
++  </library>
++</component>
+\ No newline at end of file
+Index: .idea/libraries/Maven__io_micrometer_micrometer_commons_1_12_3.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/libraries/Maven__io_micrometer_micrometer_commons_1_12_3.xml	(revision )
++++ .idea/libraries/Maven__io_micrometer_micrometer_commons_1_12_3.xml	(revision )
+@@ -0,0 +1,13 @@
++<component name="libraryTable">
++  <library name="Maven: io.micrometer:micrometer-commons:1.12.3">
++    <CLASSES>
++      <root url="jar://$MAVEN_REPOSITORY$/io/micrometer/micrometer-commons/1.12.3/micrometer-commons-1.12.3.jar!/" />
++    </CLASSES>
++    <JAVADOC>
++      <root url="jar://$MAVEN_REPOSITORY$/io/micrometer/micrometer-commons/1.12.3/micrometer-commons-1.12.3-javadoc.jar!/" />
++    </JAVADOC>
++    <SOURCES>
++      <root url="jar://$MAVEN_REPOSITORY$/io/micrometer/micrometer-commons/1.12.3/micrometer-commons-1.12.3-sources.jar!/" />
++    </SOURCES>
++  </library>
++</component>
+\ No newline at end of file
+Index: .idea/libraries/Maven__jakarta_inject_jakarta_inject_api_2_0_1.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/libraries/Maven__jakarta_inject_jakarta_inject_api_2_0_1.xml	(revision )
++++ .idea/libraries/Maven__jakarta_inject_jakarta_inject_api_2_0_1.xml	(revision )
+@@ -0,0 +1,13 @@
++<component name="libraryTable">
++  <library name="Maven: jakarta.inject:jakarta.inject-api:2.0.1">
++    <CLASSES>
++      <root url="jar://$MAVEN_REPOSITORY$/jakarta/inject/jakarta.inject-api/2.0.1/jakarta.inject-api-2.0.1.jar!/" />
++    </CLASSES>
++    <JAVADOC>
++      <root url="jar://$MAVEN_REPOSITORY$/jakarta/inject/jakarta.inject-api/2.0.1/jakarta.inject-api-2.0.1-javadoc.jar!/" />
++    </JAVADOC>
++    <SOURCES>
++      <root url="jar://$MAVEN_REPOSITORY$/jakarta/inject/jakarta.inject-api/2.0.1/jakarta.inject-api-2.0.1-sources.jar!/" />
++    </SOURCES>
++  </library>
++</component>
+\ No newline at end of file
+Index: .idea/libraries/Maven__org_jboss_logging_jboss_logging_3_5_0_Final.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/libraries/Maven__org_jboss_logging_jboss_logging_3_5_0_Final.xml	(revision )
++++ .idea/libraries/Maven__org_jboss_logging_jboss_logging_3_5_0_Final.xml	(revision )
+@@ -0,0 +1,13 @@
++<component name="libraryTable">
++  <library name="Maven: org.jboss.logging:jboss-logging:3.5.0.Final">
++    <CLASSES>
++      <root url="jar://$MAVEN_REPOSITORY$/org/jboss/logging/jboss-logging/3.5.0.Final/jboss-logging-3.5.0.Final.jar!/" />
++    </CLASSES>
++    <JAVADOC>
++      <root url="jar://$MAVEN_REPOSITORY$/org/jboss/logging/jboss-logging/3.5.0.Final/jboss-logging-3.5.0.Final-javadoc.jar!/" />
++    </JAVADOC>
++    <SOURCES>
++      <root url="jar://$MAVEN_REPOSITORY$/org/jboss/logging/jboss-logging/3.5.0.Final/jboss-logging-3.5.0.Final-sources.jar!/" />
++    </SOURCES>
++  </library>
++</component>
+\ No newline at end of file
+Index: ../helloWorld/src/helloworld/shape/Square.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>windows-1251
+===================================================================
+--- ../helloWorld/src/helloworld/shape/Square.java	(revision )
++++ ../helloWorld/src/helloworld/shape/Square.java	(revision )
+@@ -0,0 +1,36 @@
++package helloworld.shape;
++
++/**
++ * Created by Gudilin on 19.03.2021.
++ */
++public class Square extends Shape{
++
++    private final Point corner;
++    private final double size;
++
++    public Square(Point center, double size, Color color ) {
++        super(color);
++        this.corner = center;
++        this.size = size;
++    }
++
++    public Point getCorner() {
++        return corner;
++    }
++
++    public double getSize() {
++        return size;
++    }
++
++    @Override
++    public double getArea(){ return size*size;}
++
++    @Override
++    public String toString() {
++        return "Square{" +
++                "corner=" + getCorner() +
++                ", size=" + getSize() +
++                ", color = " + getColor() +
++                '}';
++    }
++}
+Index: ../helloWorld/src/Timer/Timer.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>windows-1251
+===================================================================
+--- ../helloWorld/src/Timer/Timer.java	(revision )
++++ ../helloWorld/src/Timer/Timer.java	(revision )
+@@ -0,0 +1,14 @@
++package Timer;
++
++/**
++ * Created by Gudilin on 19.03.2021.
++ */
++public class Timer {
++    public long measureTime(Runnable runnable){
++        long startTime = System.currentTimeMillis();
++        runnable.run();
++        return System.currentTimeMillis()-startTime;
++
++        //DoubleUnaryOperator
++    }
++}
+Index: .idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_el_10_1_18.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_el_10_1_18.xml	(revision )
++++ .idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_el_10_1_18.xml	(revision )
+@@ -0,0 +1,13 @@
++<component name="libraryTable">
++  <library name="Maven: org.apache.tomcat.embed:tomcat-embed-el:10.1.18">
++    <CLASSES>
++      <root url="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-el/10.1.18/tomcat-embed-el-10.1.18.jar!/" />
++    </CLASSES>
++    <JAVADOC>
++      <root url="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-el/10.1.18/tomcat-embed-el-10.1.18-javadoc.jar!/" />
++    </JAVADOC>
++    <SOURCES>
++      <root url="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-el/10.1.18/tomcat-embed-el-10.1.18-sources.jar!/" />
++    </SOURCES>
++  </library>
++</component>
+\ No newline at end of file
+Index: ../../.IntelliJIdea14/config/options/editor.codeinsight.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- ../../.IntelliJIdea14/config/options/editor.codeinsight.xml	(revision )
++++ ../../.IntelliJIdea14/config/options/editor.codeinsight.xml	(revision )
+@@ -0,0 +1,5 @@
++<application>
++  <component name="CodeInsightSettings">
++    <option name="OPTIMIZE_IMPORTS_ON_THE_FLY" value="true" />
++  </component>
++</application>
+\ No newline at end of file
+Index: ../helloWorld/src/MyCharSequence/AsciiCharSequence.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>windows-1251
+===================================================================
+--- ../helloWorld/src/MyCharSequence/AsciiCharSequence.java	(revision )
++++ ../helloWorld/src/MyCharSequence/AsciiCharSequence.java	(revision )
+@@ -0,0 +1,42 @@
++package MyCharSequence;
++
++/**
++ * Created by Gudilin on 19.03.2021.
++ */
++public class AsciiCharSequence implements java.lang.CharSequence{
++    private byte[] m_bytes;
++
++    public AsciiCharSequence(byte[] args){
++        //char[] array1=new char[args.length];
++        //for (int x=0;x<args.length;x++) {
++        //    array1[x] = (char) args[x];
++        //}
++        this.m_bytes=args;
++    }
++
++    @Override
++    public int length() {
++        return m_bytes.length;
++    }
++
++    @Override
++    public char charAt(int index) {
++        return (char) (m_bytes[index] & 0xff);
++    }
++
++    public String toString() {
++        String str = new String(m_bytes);
++        return str;
++    }
++
++    @Override
++    public CharSequence subSequence(int start, int end) {
++        int length = end - start;
++        byte[] bytes = new byte[length];
++        for (int i = 0, j = start; i < length; i++, j++) {
++            bytes[i] = m_bytes[j];
++        }
++        return new AsciiCharSequence(bytes);
++    }
++}
++
+Index: .idea/libraries/Maven__ch_qos_logback_logback_core_1_4_14.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/libraries/Maven__ch_qos_logback_logback_core_1_4_14.xml	(revision )
++++ .idea/libraries/Maven__ch_qos_logback_logback_core_1_4_14.xml	(revision )
+@@ -0,0 +1,13 @@
++<component name="libraryTable">
++  <library name="Maven: ch.qos.logback:logback-core:1.4.14">
++    <CLASSES>
++      <root url="jar://$MAVEN_REPOSITORY$/ch/qos/logback/logback-core/1.4.14/logback-core-1.4.14.jar!/" />
++    </CLASSES>
++    <JAVADOC>
++      <root url="jar://$MAVEN_REPOSITORY$/ch/qos/logback/logback-core/1.4.14/logback-core-1.4.14-javadoc.jar!/" />
++    </JAVADOC>
++    <SOURCES>
++      <root url="jar://$MAVEN_REPOSITORY$/ch/qos/logback/logback-core/1.4.14/logback-core-1.4.14-sources.jar!/" />
++    </SOURCES>
++  </library>
++</component>
+\ No newline at end of file
+Index: src/main/java/com/example/myapp/model/Pets.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>windows-1251
+===================================================================
+--- src/main/java/com/example/myapp/model/Pets.java	(revision )
++++ src/main/java/com/example/myapp/model/Pets.java	(revision )
+@@ -0,0 +1,83 @@
++package com.example.myapp.model;
++
++import javax.persistence.*;
++
++/**
++ * Created by Gudilin on 26.02.2024.
++ */
++
++@Entity
++@Table(name = "pets")
++public class Pets {
++
++    @Id
++    @GeneratedValue(strategy = GenerationType.IDENTITY)
++    @Column(name = "pet_id")
++    private Long id;
++
++
++    @ManyToOne
++    @JoinColumn(name = "owner_id", referencedColumnName = "owner_id")
++    private Owner owner;
++
++
++    @Column(name = "name")
++    private String name;
++
++
++    @Column(name = "animal_type")
++    private String animalType;
++
++
++    @Column(name = "breed")
++    private String breed;
++
++
++    @Column(name = "age")
++    private Integer age;
++
++
++    @Column(name = "vaccinations")
++    private String vaccinations;
++
++
++    public Long getId() {
++        return id;
++    }
++
++
++    // Добавлены сеттеры
++    public void setId(Long id) {
++        this.id = id;
++    }
++
++
++    public void setOwner(Owner owner) {
++        this.owner = owner;
++    }
++
++
++    public void setName(String name) {
++        this.name = name;
++    }
++
++
++    public void setAnimalType(String animalType) {
++        this.animalType = animalType;
++    }
++
++
++    public void setBreed(String breed) {
++        this.breed = breed;
++    }
++
++
++    public void setAge(Integer age) {
++        this.age = age;
++    }
++
++
++    public void setVaccinations(String vaccinations) {
++        this.vaccinations = vaccinations;
++    }
++}
+Index: ../HellowWorld2/HellowWorld2.iml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- ../HellowWorld2/HellowWorld2.iml	(revision )
++++ ../HellowWorld2/HellowWorld2.iml	(revision )
+@@ -0,0 +1,12 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<module type="JAVA_MODULE" version="4">
++  <component name="NewModuleRootManager" inherit-compiler-output="true">
++    <exclude-output />
++    <content url="file://$MODULE_DIR$">
++      <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
++    </content>
++    <orderEntry type="inheritedJdk" />
++    <orderEntry type="sourceFolder" forTests="false" />
++  </component>
++</module>
++
+Index: .idea/libraries/Maven__org_slf4j_slf4j_api_2_0_2.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/libraries/Maven__org_slf4j_slf4j_api_2_0_2.xml	(revision )
++++ .idea/libraries/Maven__org_slf4j_slf4j_api_2_0_2.xml	(revision )
+@@ -0,0 +1,13 @@
++<component name="libraryTable">
++  <library name="Maven: org.slf4j:slf4j-api:2.0.2">
++    <CLASSES>
++      <root url="jar://$MAVEN_REPOSITORY$/org/slf4j/slf4j-api/2.0.2/slf4j-api-2.0.2.jar!/" />
++    </CLASSES>
++    <JAVADOC>
++      <root url="jar://$MAVEN_REPOSITORY$/org/slf4j/slf4j-api/2.0.2/slf4j-api-2.0.2-javadoc.jar!/" />
++    </JAVADOC>
++    <SOURCES>
++      <root url="jar://$MAVEN_REPOSITORY$/org/slf4j/slf4j-api/2.0.2/slf4j-api-2.0.2-sources.jar!/" />
++    </SOURCES>
++  </library>
++</component>
+\ No newline at end of file
+Index: ../../.IntelliJIdea14/config/options/databaseDrivers.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- ../../.IntelliJIdea14/config/options/databaseDrivers.xml	(revision )
++++ ../../.IntelliJIdea14/config/options/databaseDrivers.xml	(revision )
+@@ -0,0 +1,86 @@
++<application>
++  <component name="LocalDatabaseDriverManager">
++    <driver id="db2.base" name="DB2" dialect="DB2">
++      <option name="auto-sync" value="false" />
++      <driver id="db2" name="DB2 LUW">
++        <property name="retrieveMessagesFromServerOnGetMessage" value="true" />
++      </driver>
++      <driver id="db2.jtopen" name="JTOpen (DB2 iSeries)" dialect="DB2" />
++    </driver>
++    <driver id="derby" name="Derby" dialect="Derby">
++      <driver id="derby.embedded" name="Embedded">
++        <option name="auto-sync" value="true" />
++      </driver>
++      <driver id="derby.remote" name="Remote">
++        <option name="auto-sync" value="true" />
++      </driver>
++    </driver>
++    <driver id="sqlserver" name="SQL Server" dialect="TSQL">
++      <option name="auto-sync" value="false" />
++      <driver id="sqlserver.jtds" name="jTds" />
++      <driver id="sqlserver.ms" name="Microsoft" />
++    </driver>
++    <driver id="sybase" name="Sybase" dialect="Sybase">
++      <option name="auto-sync" value="false" />
++      <driver id="sybase.jtds" name="jTds" />
++      <driver id="sybase.ase" name="Native" />
++    </driver>
++    <driver id="mysql" name="MySQL" dialect="MySQL">
++      <option name="auto-sync" value="true" />
++      <property name="zeroDateTimeBehavior" value="convertToNull" />
++      <property name="tinyInt1isBit" value="false" />
++      <property name="characterEncoding" value="utf8" />
++      <property name="characterSetResults" value="utf8" />
++      <property name="yearIsDateType" value="false" />
++    </driver>
++    <driver id="oracle" name="Oracle" dialect="Oracle">
++      <option name="auto-sync" value="false" />
++      <option name="auto-commit" value="false" />
++    </driver>
++    <driver id="postgresql" name="PostgreSQL" dialect="PostgreSQL">
++      <option name="auto-sync" value="true" />
++      <library>
++        <url>file://$APPLICATION_CONFIG_DIR$/jdbc-drivers/postgresql-driver-license.txt</url>
++      </library>
++      <library>
++        <url>file://$APPLICATION_CONFIG_DIR$/jdbc-drivers/waffle-jna-win-1.8.1.jar</url>
++      </library>
++      <library>
++        <url>file://$APPLICATION_CONFIG_DIR$/jdbc-drivers/postgresql-42.2.5.jar</url>
++      </library>
++      <library>
++        <url>file://$APPLICATION_CONFIG_DIR$/jdbc-drivers/jna-win-4.4.0.jar</url>
++      </library>
++      <library>
++        <url>file://$APPLICATION_CONFIG_DIR$/jdbc-drivers/jna-platform-win-4.4.0.jar</url>
++      </library>
++    </driver>
++    <driver id="hsqldb" name="HSQLDB" dialect="HSQLDB">
++      <driver id="hsqldb.embedded" name="Embedded">
++        <option name="auto-sync" value="true" />
++      </driver>
++      <driver id="hsqldb.remote" name="Remote">
++        <option name="auto-sync" value="true" />
++      </driver>
++      <driver id="hsqldb.in-memory" name="In-memory">
++        <option name="auto-sync" value="true" />
++      </driver>
++    </driver>
++    <driver id="h2" name="H2" dialect="H2">
++      <driver id="h2.embedded" name="Embedded">
++        <option name="auto-sync" value="true" />
++      </driver>
++      <driver id="h2.remote" name="Remote">
++        <option name="auto-sync" value="true" />
++      </driver>
++      <driver id="h2.in-memory" name="In-memory">
++        <option name="auto-sync" value="true" />
++      </driver>
++    </driver>
++    <driver id="sqlite" name="SQLite" dialect="SQLite">
++      <option name="auto-sync" value="true" />
++      <driver id="sqlite.xerial" name="Xerial" />
++      <driver id="sqlite.zentus" name="Zentus" />
++    </driver>
++  </component>
++</application>
+\ No newline at end of file
+Index: .idea/libraries/Maven__org_springframework_boot_spring_boot_autoconfigure_3_2_2.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/libraries/Maven__org_springframework_boot_spring_boot_autoconfigure_3_2_2.xml	(revision )
++++ .idea/libraries/Maven__org_springframework_boot_spring_boot_autoconfigure_3_2_2.xml	(revision )
+@@ -0,0 +1,13 @@
++<component name="libraryTable">
++  <library name="Maven: org.springframework.boot:spring-boot-autoconfigure:3.2.2">
++    <CLASSES>
++      <root url="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-autoconfigure/3.2.2/spring-boot-autoconfigure-3.2.2.jar!/" />
++    </CLASSES>
++    <JAVADOC>
++      <root url="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-autoconfigure/3.2.2/spring-boot-autoconfigure-3.2.2-javadoc.jar!/" />
++    </JAVADOC>
++    <SOURCES>
++      <root url="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-autoconfigure/3.2.2/spring-boot-autoconfigure-3.2.2-sources.jar!/" />
++    </SOURCES>
++  </library>
++</component>
+\ No newline at end of file
